@@ -40,10 +40,5 @@ public class GameManager : MonoBehaviour
 			if (GameSpeedMultiplier < 5)
 				GameSpeedMultiplier += 0.01f;
 		}
-
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			Application.Quit();
-		}
 	}
 }

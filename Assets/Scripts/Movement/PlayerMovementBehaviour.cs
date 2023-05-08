@@ -16,6 +16,8 @@ public class PlayerMovementBehaviour : MonoBehaviour
     [SerializeField]
     private float _jumpPower;
     [SerializeField]
+    private float _jumpVelocity;
+    [SerializeField]
     private GroundColliderBehaviour _groundCollider;
 
     // Start is called before the first frame update
@@ -40,12 +42,18 @@ public class PlayerMovementBehaviour : MonoBehaviour
     {
         //Checks to see if the player is on the ground or has an extra jump
         if (_groundCollider.IsGrounded || _numberOfJumps > 0)
-        { 
+        {
             //If so, allow the player to jump
             _rb.AddForce(Vector3.up * _jumpPower, ForceMode.VelocityChange);
+            _rb.velocity = new Vector3(0, 10, 0);
         
             _numberOfJumps--;
         }
+    }
+
+    public void Attack()
+    {
+
     }
 
     // Update is called once per frame

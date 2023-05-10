@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 682920080}
   - component: {fileID: 682920079}
   - component: {fileID: 682920078}
+  - component: {fileID: 682920083}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -272,8 +273,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 217636128420312135, guid: b1ddf7dd13bdb89429c4efb89fd5aba6, type: 3}
   _projectileSpeed: 5
-  _projectileLifetime: 5
   _projectileSpawnRate: 0.525
+  _shouldAutoFire: 0
 --- !u!136 &682920079
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -353,6 +354,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &682920083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682920077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be75578470ec332459696d750fcc705c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _range: -1
+  _fireRate: 0.5
 --- !u!1 &937989823
 GameObject:
   m_ObjectHideFlags: 0

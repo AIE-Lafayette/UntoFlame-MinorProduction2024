@@ -44,9 +44,10 @@ public class PlayerMovementBehaviour : MonoBehaviour
         if (_groundCollider.IsGrounded || _numberOfJumps > 0)
         {
             //If so, allow the player to jump
-            _rb.AddForce(Vector3.up * _jumpPower, ForceMode.VelocityChange);
+            //_rb.AddForce(Vector3.up * _jumpPower, ForceMode.VelocityChange);
             _rb.velocity = new Vector3(0, 10, 0);
         
+            //Decrement jumpcount for the player
             _numberOfJumps--;
         }
     }

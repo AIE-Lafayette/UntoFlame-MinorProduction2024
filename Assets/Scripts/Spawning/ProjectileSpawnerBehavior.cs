@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ObjectPool;
+using Utility.ObjectPool;
 
 public class ProjectileSpawnerBehavior : MonoBehaviour
 {

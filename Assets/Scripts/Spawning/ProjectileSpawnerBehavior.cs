@@ -25,7 +25,7 @@ public class ProjectileSpawnerBehavior : MonoBehaviour
     {
         GameObject projectile = ObjectPoolBehavior.Instance.GetObject(_projectile, transform.position, transform.rotation);
         Vector3 direction = (transform.position - GameManager.Instance.Player.transform.position).normalized;
-        projectile.GetComponent<Rigidbody>().velocity = (direction*-1) * _projectileSpeed;
+        projectile.GetComponent<Rigidbody>().velocity = (direction*-1) * _projectileSpeed * (GameManager.Instance.GameSpeedMultiplier);
     }
 
     float elapsedTime;

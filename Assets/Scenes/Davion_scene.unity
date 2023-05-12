@@ -263,14 +263,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357372015}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 51.9, z: 0}
+  m_LocalScale: {x: 1.3536, y: 1.3536, z: 1.3536}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 701648098}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!199 &357372017
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -359,7 +359,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -918,7 +918,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -0.3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -971,7 +971,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 5
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -979,7 +979,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 9, y: 10, z: 73.61}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1054,7 +1054,7 @@ ParticleSystem:
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
-    randomDirectionAmount: 0
+    randomDirectionAmount: 1
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
@@ -1177,7 +1177,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -2994,7 +2994,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5159,8 +5159,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663460497}
-  m_LocalRotation: {x: 0.0056570475, y: 0.6218325, z: 0.0044393176, w: -0.78311735}
-  m_LocalPosition: {x: 25.441628, y: 5.935093, z: 395.2}
+  m_LocalRotation: {x: 0.016897395, y: 0.37206495, z: -0.007047817, w: 0.9280262}
+  m_LocalPosition: {x: 1.2115209, y: 36.756214, z: 327.9363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5207,9 +5207,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9067023988937939148, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
+      propertyPath: m_Name
+      value: Pit Light
+      objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686100, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_Name
-      value: Lights traps_ParticleSystems
+      value: Pit Light Hazard_Particle Systems
       objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_RootOrder
@@ -5217,31 +5221,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.261543
+      value: 9.571661
       objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.479916
+      value: 44.21587
       objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 54.068134
+      value: 43.11307
       objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.6567606
       objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.021723995
       objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7533904
       objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.024425402
       objectReference: {fileID: 0}
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5254,6 +5258,10 @@ PrefabInstance:
     - target: {fileID: 9067023989098686101, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067023989263348736, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
+      propertyPath: m_Name
+      value: Pit Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}

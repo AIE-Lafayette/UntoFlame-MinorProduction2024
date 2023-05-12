@@ -15,8 +15,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private float _maxSpeed;
     [SerializeField]
     private float _jumpPower;
-    [SerializeField]
-    private float _jumpVelocity;
+    private Vector3 _jumpVelocity;
     [SerializeField]
     private GroundColliderBehaviour _groundCollider;
 
@@ -43,9 +42,14 @@ public class PlayerMovementBehaviour : MonoBehaviour
         //Checks to see if the player is on the ground or has an extra jump
         if (_groundCollider.IsGrounded || _numberOfJumps > 0)
         {
+            _jumpVelocity = new Vector3(0, 2, 0) * _jumpPower;
+
             //If so, allow the player to jump
             //_rb.AddForce(Vector3.up * _jumpPower, ForceMode.VelocityChange);
-            _rb.velocity = new Vector3(0, 10, 0);
+
+            //_rb.AddForce(_jumpVelocity * _jumpPower, ForceMode.VelocityChange);
+
+            _rb.velocity = _jumpVelocity;
         
             //Decrement jumpcount for the player
             _numberOfJumps--;

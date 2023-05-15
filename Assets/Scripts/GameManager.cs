@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,20 @@ public class GameManager : MonoBehaviour
 
 			return _instance;
 		}
+	}
+
+	public void StartGame()
+	{
+		Debug.Log("Test");
+		SceneManager.SetActiveScene(SceneManager.GetSceneByName("Bryon_Scene"));
+		// Reset the score
+		Score = 0;
+
+		// Reset the game speed
+		GameSpeedMultiplier = 1;
+
+		// Reset the player position
+		Player.transform.position = Vector3.zero;
 	}
 
 	private float timePassed;

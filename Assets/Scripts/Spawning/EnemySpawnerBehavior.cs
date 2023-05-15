@@ -14,11 +14,5 @@ namespace EnemyBehavior
 
 			GameObject enemy = ObjectPoolBehavior.Instance.GetObject(_enemies[randomNumber], transform.position, Quaternion.identity);
 		}
-
-		// Update is called once per frame
-		void Update()
-		{
-			
-		}
 	}
 }

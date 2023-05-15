@@ -14,6 +14,8 @@ public class PlayerMovementBehaviour : MonoBehaviour
     [SerializeField]
     private float _maxSpeed;
     [SerializeField]
+    private float _maxAirControl;
+    [SerializeField]
     private float _jumpPower;
     private Vector3 _jumpVelocity;
     [SerializeField]
@@ -42,7 +44,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
         //Checks to see if the player is on the ground or has an extra jump
         if (_groundCollider.IsGrounded || _numberOfJumps > 0)
         {
-            _jumpVelocity = new Vector3(0, 2, 0) * _jumpPower;
+            _jumpVelocity = new Vector3(0, 1, 0) * _jumpPower;
 
             //If so, allow the player to jump
             //_rb.AddForce(Vector3.up * _jumpPower, ForceMode.VelocityChange);
@@ -56,11 +58,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
         }
     }
 
-    public void Attack()
-    {
-
-    }
-
     // Update is called once per frame
 
     private void FixedUpdate()
@@ -70,7 +67,11 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
         //Only allows the player to move forward if the player is on the ground
         if (_groundCollider.IsGrounded)
-        _rb.AddForce(_moveDirection * acceleration * Time.deltaTime, ForceMode.VelocityChange);
+        { 
+            _rb.AddForce(_moveDirection * acceleration * Time.deltaTime, ForceMode.VelocityChange);
+        }
                 
     }
+
+    //Application.TargetFrameRate
 }

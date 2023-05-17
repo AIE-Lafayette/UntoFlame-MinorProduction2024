@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ObjectPool
+namespace Utility.ObjectPool
 {
-    public class ObjectPoolBehaviour : MonoBehaviour
+    public class ObjectPoolBehavior : MonoBehaviour
     {
         private List<Pool> _objectPools = new List<Pool>();
-        private static ObjectPoolBehaviour _instance;
+        private static ObjectPoolBehavior _instance;
 
-        public static ObjectPoolBehaviour Instance
+        public static ObjectPoolBehavior Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = FindObjectOfType<ObjectPoolBehaviour>();
+                    _instance = FindObjectOfType<ObjectPoolBehavior>();
                 }
 
                 if (_instance == null)
                 {
                     GameObject objectPool = new GameObject("Object Pool");
-                    _instance = objectPool.AddComponent<ObjectPoolBehaviour>();
+                    _instance = objectPool.AddComponent<ObjectPoolBehavior>();
                 }
 
                 return _instance;

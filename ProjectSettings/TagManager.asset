@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Death Wall
   - Ground
+  - Enemy
+  - Weapon
   layers:
   - Default
   - TransparentFX

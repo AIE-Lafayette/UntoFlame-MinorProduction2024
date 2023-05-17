@@ -3,23 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovementBehaviour : MonoBehaviour
-{    
-    private float _jumpPower;
+{
+
     private Rigidbody _rb;
-    private GroundColliderBehaviour _groundCollider;
     private Vector2 _moveDirection;
     private Vector3 _jumpVelocity;
 
-
+    [Header("Player Speeds")]
     [Tooltip("Controls the speed of the player while on the ground.")]
     [SerializeField]
     private float _groundSpeed;
     [Tooltip("Controls the speed of the player while in the air.")]
     [SerializeField]
     private float _airSpeed;
+
+    [Header("Player Jumps")]
+    [Tooltip("Determines how high the player jumps")]
+    [SerializeField]
+    private float _jumpPower;
     [Tooltip("How many times the player can jump before hitting the ground.")]
     [SerializeField]
     public float _numberOfJumps = 2;
+
+    [SerializeField]
+    private GroundColliderBehaviour _groundCollider;
 
     // Start is called before the first frame update
 
@@ -38,7 +45,9 @@ public class PlayerMovementBehaviour : MonoBehaviour
         _moveDirection = direction;
     }
 
-    //Function that is called when the player jumps.
+    /// <summary>
+    /// Function that is called when the player jumps.
+    /// </summary>
     public void Jump()
     {
         //Checks to see if the player is on the ground or has an extra jump

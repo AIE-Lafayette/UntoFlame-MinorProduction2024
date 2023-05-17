@@ -888,6 +888,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
+      propertyPath: _groundSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
       propertyPath: _maxAirSpeed
       value: 7
       objectReference: {fileID: 0}

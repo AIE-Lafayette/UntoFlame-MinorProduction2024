@@ -18,6 +18,7 @@ public class GroundColliderBehaviour : MonoBehaviour
         //If the player is on the ground...
         if (other.CompareTag("Ground"))
         {
+            Debug.Log("Grounded");
             //...set "IsGrounded" to be true
             IsGrounded = true;
             _moveBehaviour._numberOfJumps = 2;

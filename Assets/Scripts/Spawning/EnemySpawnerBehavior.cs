@@ -10,7 +10,8 @@ namespace EnemyBehavior
 		private GameObject[] _enemies;
 		void Start()
 		{
-			ObjectPoolBehavior.Instance.GetObject(_enemies[Random.Range(0, _enemies.Length - 1)], transform.position, Quaternion.identity);
+			int _randomNumber = Random.Range(0, _enemies.Length);
+			ObjectPoolBehavior.Instance.GetObject(_enemies[_randomNumber], transform.position, Quaternion.identity);
 		}
 	}
 }

@@ -15,7 +15,6 @@ public class InputBehaviour : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-
         _moveBehaviour.SetMoveDirection(new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0));
         if (Input.GetKeyDown(KeyCode.Space))
             _moveBehaviour.Jump();

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ObjectPool;
+using Utility.ObjectPool;
 
 public delegate void ChunkEvent(GameObject chunk);
 
@@ -37,7 +37,7 @@ public class ChunkSpawnerBehaviour : MonoBehaviour
     {
         int randomNumber = Random.Range(0, _mapChunk.Length - 1);
 
-        GameObject chunk = ObjectPoolBehaviour.Instance.GetObject(_mapChunk[randomNumber], transform.position, Quaternion.identity);
+        GameObject chunk = ObjectPoolBehavior.Instance.GetObject(_mapChunk[randomNumber], transform.position, Quaternion.identity);
 
         ScreenBoundaryBehaviour._canSpawn = false;
     }

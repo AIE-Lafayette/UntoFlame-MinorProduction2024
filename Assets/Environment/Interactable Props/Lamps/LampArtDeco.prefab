@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7939453004094381878}
   m_Layer: 0
-  m_Name: ArtDecoLamp
+  m_Name: LampArtDeco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

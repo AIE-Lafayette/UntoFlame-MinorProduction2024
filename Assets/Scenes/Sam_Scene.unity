@@ -872,16 +872,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
+      propertyPath: _speed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
+      propertyPath: _airSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
       propertyPath: _maxSpeed
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
       propertyPath: _jumpPower
-      value: 10
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
+      propertyPath: _maxAirSpeed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
       propertyPath: _acceleration
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
+      propertyPath: _maxAirControl
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
       propertyPath: _numberOfJumps

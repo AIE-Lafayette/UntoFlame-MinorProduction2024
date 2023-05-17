@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovementBehaviour : MonoBehaviour
-{
+{    
+    private float _jumpPower;
     private Rigidbody _rb;
+    private GroundColliderBehaviour _groundCollider;
     private Vector2 _moveDirection;
+    private Vector3 _jumpVelocity;
 
+
+    [Tooltip("Controls the speed of the player while on the ground.")]
     [SerializeField]
-    private float _acceleration;
+    private float _groundSpeed;
+    [Tooltip("Controls the speed of the player while in the air.")]
+    [SerializeField]
+    private float _airSpeed;
+    [Tooltip("How many times the player can jump before hitting the ground.")]
     [SerializeField]
     public float _numberOfJumps = 2;
-    [SerializeField]
-    private float _maxSpeed;
-    [SerializeField]
-    private float _maxAirControl;
-    [SerializeField]
-    private float _jumpPower;
-    private Vector3 _jumpVelocity;
-    [SerializeField]
-    private GroundColliderBehaviour _groundCollider;
 
     // Start is called before the first frame update
 
@@ -30,9 +30,9 @@ public class PlayerMovementBehaviour : MonoBehaviour
     }
 
     /// <summary>
-    /// Future function for future projects
+    /// Allows the player's direction to be changed beased upon input.
     /// </summary>
-    ///   <param name="direction"></param>
+    ///   <param name="direction">The direction that the player inputs</param>
     public void SetMoveDirection(Vector3 direction)
     {
         _moveDirection = direction;
@@ -44,13 +44,10 @@ public class PlayerMovementBehaviour : MonoBehaviour
         //Checks to see if the player is on the ground or has an extra jump
         if (_groundCollider.IsGrounded || _numberOfJumps > 0)
         {
+            //Force to adjust player by
             _jumpVelocity = new Vector3(0, 1, 0) * _jumpPower;
 
-            //If so, allow the player to jump
-            //_rb.AddForce(Vector3.up * _jumpPower, ForceMode.VelocityChange);
-
-            //_rb.AddForce(_jumpVelocity * _jumpPower, ForceMode.VelocityChange);
-
+            //Adjusts the player position
             _rb.velocity = _jumpVelocity;
         
             //Decrement jumpcount for the player
@@ -62,16 +59,21 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Allows for the player's acceleration to be modified in unity
-        float acceleration = _acceleration;
+        //Allows for the player's speed to be modified in unity
+        float groundSpeed = _groundSpeed;
+        float airSpeed = _airSpeed;
 
-        //Only allows the player to move forward if the player is on the ground
+        //Controls the speed the player moves on ground
         if (_groundCollider.IsGrounded)
         { 
-            _rb.AddForce(_moveDirection * acceleration * Time.deltaTime, ForceMode.VelocityChange);
+            _rb.AddForce(_moveDirection * groundSpeed * Time.deltaTime, ForceMode.VelocityChange);
+        }
+
+        //Controls the speed the player moves in air
+        if (!_groundCollider.IsGrounded)
+        { 
+            _rb.AddForce(_moveDirection * airSpeed * Time.deltaTime, ForceMode.VelocityChange);
         }
                 
     }
-
-    //Application.TargetFrameRate
 }

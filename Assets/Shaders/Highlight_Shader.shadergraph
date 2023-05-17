@@ -332,7 +332,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "10d7c7480b7140239d090db09d6f5072",
     "m_Id": 0,
-    "m_DisplayName": "Metal",
+    "m_DisplayName": "Metallic",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -349,10 +349,10 @@
     "m_Guid": {
         "m_GuidSerialized": "333892b3-7236-4346-a442-f35e879ac536"
     },
-    "m_Name": "Metal",
+    "m_Name": "Metallic",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Metal",
-    "m_DefaultReferenceName": "_Metal",
+    "m_RefNameGeneratedByDisplayName": "Metallic",
+    "m_DefaultReferenceName": "_Metallic",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,

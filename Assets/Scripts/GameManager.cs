@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,16 @@ public class GameManager : MonoBehaviour
 
 			return _instance;
 		}
+	}
+
+	public void StartGame()
+	{
+		SceneManager.LoadScene(1);
+		// Reset the score
+		Score = 0;
+
+		// Reset the game speed
+		GameSpeedMultiplier = 1;
 	}
 
 	private float timePassed;

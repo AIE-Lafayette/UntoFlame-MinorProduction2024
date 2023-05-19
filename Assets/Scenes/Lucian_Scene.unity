@@ -431,7 +431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4c2249ac15eaccc4f9e69693de4664dd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2249ac15eaccc4f9e69693de4664dd, type: 3}
@@ -493,6 +493,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f49ea92f96c7101499a8ccbae4c95c1b, type: 3}
       propertyPath: m_Name
       value: BuildingC
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f49ea92f96c7101499a8ccbae4c95c1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49ea92f96c7101499a8ccbae4c95c1b, type: 3}

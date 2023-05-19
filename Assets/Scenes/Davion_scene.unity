@@ -19882,6 +19882,63 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1001 &1986273470
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_Name
+      value: EnemyPatrol_SkeletalMesh
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
 --- !u!1001 &9067023988199725020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19944,6 +20001,10 @@ PrefabInstance:
     - target: {fileID: 9067023989263348736, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
       propertyPath: m_Name
       value: Pit Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067023989263348739, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.52008444
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af25c1fbbc1a2f84c83f9a49a2f5e136, type: 3}

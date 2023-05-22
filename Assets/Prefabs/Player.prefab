@@ -129,10 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2511b4ac720e4b41a76c64459685f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _acceleration: 20
-  _numberOfJumps: 2
-  _maxSpeed: 20
+  _groundSpeed: 0
+  _airSpeed: 0
   _jumpPower: 8
+  _numberOfJumps: 2
   _groundCollider: {fileID: 3350988339250121843}
 --- !u!114 &3216039639892729020
 MonoBehaviour:

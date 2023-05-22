@@ -29,5 +29,10 @@ public class EnemyCollisionBehaviour : MonoBehaviour
             //...set enemy to not active
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

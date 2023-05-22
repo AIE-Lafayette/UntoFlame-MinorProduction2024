@@ -12,14 +12,17 @@ namespace EnemyBehavior
 		[SerializeField, Tooltip("How close the enemy should be to the player before it starts chasing.")]
 		private float _range;
 
+
+		void Start()
+		{
+		}
 		void Update()
 		{
 			if (!GameManager.Instance.Player.gameObject)
 				return;
-				
+
 			if (Vector3.Distance(transform.position, GameManager.Instance.Player.transform.position) < _range || _range < 0)
-				transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.Player.transform.position, 
-					_speed * Time.deltaTime);
+				transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.Player.transform.position, _speed * Time.deltaTime);		
 		}
 	}
 }

@@ -10,6 +10,8 @@ public class ChunkSpawnerBehaviour : MonoBehaviour
     private ChunkEvent _chunkDespawn;
     private ChunkEvent _chunkSpawn;
 
+    private static ChunkSpawnerBehaviour _instance;
+
     public void AddChunkDespawnListener(ChunkEvent listener) => _chunkDespawn += listener;
     public void AddChunkSpawnListener(ChunkEvent listener) => _chunkSpawn += listener;
 
@@ -20,25 +22,40 @@ public class ChunkSpawnerBehaviour : MonoBehaviour
     [SerializeField]
     private ScreenBoundaryBehaviour _screenBoundary;
 
+    public static ChunkSpawnerBehaviour Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<ChunkSpawnerBehaviour>();
+            }
+
+            if (_instance == null)
+            {
+                Debug.Log("No chunk spawner found in scene. Making chunk spawner.");
+                GameObject chunkSpawner = new GameObject("ChunkSpawner");
+                _instance = chunkSpawner.AddComponent<ChunkSpawnerBehaviour>();
+            }
+
+            return _instance;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         SpawnChunk();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (ScreenBoundaryBehaviour._canSpawn)
-            SpawnChunk();
-    }
-
-    void SpawnChunk()
+    public void SpawnChunk()
     {
         int randomNumber = Random.Range(0, _mapChunk.Length - 1);
 
-        GameObject chunk = ObjectPoolBehavior.Instance.GetObject(_mapChunk[randomNumber], transform.position, Quaternion.identity);
+        Vector3 spawnPosition = new Vector3(Mathf.Floor(transform.position.x), transform.position.y, transform.position.z);
 
-        ScreenBoundaryBehaviour._canSpawn = false;
+        Instantiate(_mapChunk[randomNumber], spawnPosition, Quaternion.identity);
+
+
     }
 }

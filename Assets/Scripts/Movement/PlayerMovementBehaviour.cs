@@ -68,10 +68,10 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Allows for the player's speed to be modified in unity
+       //Allows for the player's speed to be modified in unity
         float groundSpeed = _groundSpeed;
         float airSpeed = _airSpeed;
-
+        
         //Controls the speed the player moves on ground
         if (_groundCollider.IsGrounded)
         { 

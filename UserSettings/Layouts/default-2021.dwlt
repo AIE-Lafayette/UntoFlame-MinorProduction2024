@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 318
     y: 0
     width: 977
     height: 386
@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 14}
   m_Selected: 0
+<<<<<<< Updated upstream
   m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
@@ -334,6 +335,9 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &14
+=======
+  m_LastSelected: 1
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -447,7 +451,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 362
+    width: 317
     height: 540
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -474,7 +478,11 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+<<<<<<< Updated upstream
+        m_ClientGUIView: {fileID: 2}
+=======
+        m_ClientGUIView: {fileID: 4}
+>>>>>>> Stashed changes
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -502,9 +510,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 363
+    x: 318
     y: 73
-    width: 1101
+    width: 1146
     height: 540
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -795,7 +803,16 @@ MonoBehaviour:
   m_Size:
     m_Target: 12.509996
     speed: 2
-    m_Value: 12.509996
+    m_Value: 13.265898
+=======
+    m_Target: {x: -0.15386847, y: 0.65546584, z: -0.1389512, w: -0.7263957}
+    speed: 2
+    m_Value: {x: -0.15386847, y: 0.65546584, z: -0.1389512, w: -0.7263957}
+  m_Size:
+    m_Target: 71.79297
+    speed: 2
+    m_Value: 68.70141
+>>>>>>> Stashed changes
   m_Ortho:
     m_Target: 0
     speed: 2

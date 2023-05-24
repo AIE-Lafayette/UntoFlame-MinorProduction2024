@@ -96,22 +96,3 @@ MonoBehaviour:
   _projectileSpeed: 60
   _projectileSpawnRate: 0
   _shouldAutoFire: 0
---- !u!1 &9178343463793656026 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2650402677839653037, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
-  m_PrefabInstance: {fileID: 6604557377315498103}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1828934836470222349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9178343463793656026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfa11c66167beef49ba56e39b9660bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shouldKill: 0
-  _knockbackForce: 0

@@ -63,14 +63,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChaseEnemy Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5995234876917119942, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
 --- !u!1 &553083599398264157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8063640948557941252, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
   m_PrefabInstance: {fileID: 7515166521235953497}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7839431467514445835
+--- !u!114 &1408961232607674031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,24 +83,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed35399321df4d4aaa4ea23920b046b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 15
-  _range: -1
---- !u!1 &5513288933918457844 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2650402677839653037, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
-  m_PrefabInstance: {fileID: 7515166521235953497}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6157837048026690954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5513288933918457844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfa11c66167beef49ba56e39b9660bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shouldKill: 0
-  _knockbackForce: 15
+  _speed: 0
+  _range: 0

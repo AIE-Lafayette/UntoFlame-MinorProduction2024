@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7304130546941032972}
   - component: {fileID: 8586762250107254157}
-  - component: {fileID: 5995234876917119942}
+  - component: {fileID: 5889555393299201531}
   m_Layer: 0
   m_Name: HitCollider
   m_TagString: Enemy
@@ -46,7 +46,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5995234876917119942
+--- !u!114 &5889555393299201531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

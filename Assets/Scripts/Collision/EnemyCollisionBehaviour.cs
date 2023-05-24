@@ -20,6 +20,6 @@ public class EnemyCollisionBehaviour : MonoBehaviour
 
 		Vector3 knockbackDirection = new Vector3(-Mathf.Cos(angleRadians), Mathf.Sin(angleRadians), 0);
 
-		damageBehavior.ApplyKnockback(knockbackDirection, _knockbackForce);
+		damageBehavior.ApplyDamage(knockbackDirection, _knockbackForce);
 	}
 }

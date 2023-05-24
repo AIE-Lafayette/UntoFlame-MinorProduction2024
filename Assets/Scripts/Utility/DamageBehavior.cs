@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void DamageEvent();
+
 [RequireComponent(typeof(Rigidbody))]
 public class DamageBehavior : MonoBehaviour
 {
@@ -23,16 +25,18 @@ public class DamageBehavior : MonoBehaviour
     }
 
     /// <summary>
-    /// Applies a knockback to the object, as well as enables invincibility on the object. Will reset velocity before applying force.
+    /// Applies damage and optional knockback to the object, as well as enables invincibility on the object. Will reset velocity before applying force.
     /// </summary>
-    /// <param name="direction">The direction to knock the object towards.</param>
-    /// <param name="force">The force to apply to the  object. Uses impulse ForceMode.</param>
-    public void ApplyKnockback(Vector3 direction, float force)
+    /// <param name="knockbackDirection">The direction to knock the object towards.</param>
+    /// <param name="knockbackForce">The force to apply to the  object. Uses impulse ForceMode. Defaults to Zero.</param>
+    public void ApplyDamage(Vector3 knockbackDirection, float knockbackForce=0)
     {
         _rigidbody.velocity = Vector3.zero;
-		_rigidbody.AddForce(direction * force, ForceMode.Impulse);
+		_rigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
+
         IsInvincible = true;
     }
+
 
     /// <summary>
     /// Checks if the object is invincible, and if so, updates the elapsed time. If the elapsed time is greater than the invincibility time, the object is no longer invincible.

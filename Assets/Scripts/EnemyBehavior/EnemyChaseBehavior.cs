@@ -12,10 +12,6 @@ namespace EnemyBehavior
 		[SerializeField, Tooltip("How close the enemy should be to the player before it starts chasing.")]
 		private float _range;
 
-
-		void Start()
-		{
-		}
 		void Update()
 		{
 			if (!GameManager.Instance.Player.gameObject)

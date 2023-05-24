@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
 
 	public float GameSpeedMultiplier {get; private set;}
 
+	[Tooltip("How far the player can go below the map before dying.")]
+	private float PlayerDeathHeight = 10;
+
 	private static GameManager _instance;
 	public static GameManager Instance
 	{
@@ -50,6 +53,12 @@ public class GameManager : MonoBehaviour
 			timePassed = 0;
 			if (GameSpeedMultiplier < 5)
 				GameSpeedMultiplier += 0.01f;
+		}
+
+
+		if (Player.transform.position.y < -PlayerDeathHeight)
+		{
+			Player.SetActive(false);
 		}
 	}
 }

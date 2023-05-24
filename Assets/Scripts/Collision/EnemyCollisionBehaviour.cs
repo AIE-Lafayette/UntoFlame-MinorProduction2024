@@ -9,8 +9,10 @@ public class EnemyCollisionBehaviour : MonoBehaviour
 
 	[SerializeField, Tooltip("The angle (in degrees) at which the player should be knocked back.")]
 	private float _knockbackAngle;
+
 	private void OnTriggerEnter(Collider other)
 	{
+		// Make sure the colliding object has a DamageBehavior and that it isn't invincible.
 		DamageBehavior damageBehavior = other.GetComponent<DamageBehavior>();
 		if (!damageBehavior || damageBehavior.IsInvincible) return;
 

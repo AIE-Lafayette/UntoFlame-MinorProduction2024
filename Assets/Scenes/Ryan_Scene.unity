@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mapChunk:
+  - {fileID: 7775447157822469056, guid: 9afa8513172c1c843a49cfe6d9a61d67, type: 3}
   - {fileID: 1799094064947746948, guid: e7524670219432d4aa076d2627b3e7a9, type: 3}
   _screenBoundary: {fileID: 445535587}
 --- !u!4 &6753108
@@ -667,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3350988339194156549, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.42
+      value: -5.17
       objectReference: {fileID: 0}
     - target: {fileID: 3350988339194156549, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -719,7 +720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
       propertyPath: _groundSpeed
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3350988339194156664, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
       propertyPath: _acceleration

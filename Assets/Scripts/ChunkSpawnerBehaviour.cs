@@ -50,7 +50,7 @@ public class ChunkSpawnerBehaviour : MonoBehaviour
 
     public void SpawnChunk()
     {
-        int randomNumber = Random.Range(0, _mapChunk.Length - 1);
+        int randomNumber = Random.Range(0, _mapChunk.Length);
 
         Vector3 spawnPosition = new Vector3(Mathf.Floor(transform.position.x), transform.position.y, transform.position.z);
 

@@ -11,12 +11,13 @@ public class EnemyCollisionBehaviour : MonoBehaviour
 	private float _knockbackAngle;
 	private void OnTriggerEnter(Collider other)
 	{
-		if (!other.CompareTag("Player")) return;
+		DamageBehavior damageBehavior = other.GetComponent<DamageBehavior>();
+		if (!damageBehavior || damageBehavior.IsInvincible) return;
 
 		float angleRadians = _knockbackAngle * Mathf.Deg2Rad;
 
 		Vector3 knockbackDirection = new Vector3(-Mathf.Cos(angleRadians), Mathf.Sin(angleRadians), 0);
 
-		GameManager.Instance.Player.GetComponent<Rigidbody>().AddForce(knockbackDirection * _knockbackForce);
+		damageBehavior.ApplyKnockback(knockbackDirection, _knockbackForce);
 	}
 }

@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
 	public void StartGame()
 	{
-		SceneManager.LoadScene(2);
+		SceneManager.LoadScene(1);
 		// Reset the score
 		Score = 0;
 

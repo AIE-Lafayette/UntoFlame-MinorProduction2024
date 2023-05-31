@@ -48,6 +48,8 @@ public class DamageBehavior : MonoBehaviour
     /// <param name="knockbackForce">The force to apply to the  object. Uses impulse ForceMode. Defaults to Zero.</param>
     public void ApplyDamage(Vector3 knockbackDirection, float knockbackForce=0)
     {
+        if (IsInvincible) return;
+        
         _rigidbody.velocity = Vector3.zero;
 		_rigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
 

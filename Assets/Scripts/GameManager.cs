@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 	public GameObject Player;
 
 	[Tooltip("The game score.")]
-	public int Score = 0;
+	public int Score;
 
 	public float GameSpeedMultiplier {get; private set;}
 
@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	private float timePassed;
+	
 	private void Update() 
 	{
 		timePassed += Time.deltaTime;

@@ -8,7 +8,7 @@ public class DeathWallBehaviour : MonoBehaviour
     {
         if (other.tag == "Player")
         { 
-            Destroy(other.gameObject);
+            other.GetComponent<DamageBehavior>().Kill();
         }
     }
 }

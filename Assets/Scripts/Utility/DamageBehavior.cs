@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void DamageEvent();
+
 
 [RequireComponent(typeof(Rigidbody))]
 public class DamageBehavior : MonoBehaviour
 {
+    public delegate void DamageEvent();
+
     private bool _isInvincible = false;
     private Rigidbody _rigidbody;
 
     [SerializeField, Tooltip("The amount of time the object is invincible after taking damage.")]
     private float _invincibilityTime;
     private float _elapsedTime = 0;
+
+    private DamageEvent damageEvent;
+    private DamageEvent deathEvent;
 
     void Start()
     {
@@ -23,6 +28,18 @@ public class DamageBehavior : MonoBehaviour
         get { return _isInvincible; }
         private set { _isInvincible = value; }
     }
+
+    public void AddDamageEventListener(DamageEvent listener)
+    {
+        damageEvent += listener;
+    }
+
+    public void AddDeathEventListener(DamageEvent listener)
+    {
+        deathEvent += listener;
+    }
+
+
 
     /// <summary>
     /// Applies damage and optional knockback to the object, as well as enables invincibility on the object. Will reset velocity before applying force.
@@ -35,8 +52,19 @@ public class DamageBehavior : MonoBehaviour
 		_rigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
 
         IsInvincible = true;
+
+        if (damageEvent != null)
+            damageEvent.Invoke();
     }
 
+    /// <summary>
+    /// Kills the gameobject.
+    /// </summary>
+    public void Kill()
+    {
+        if (deathEvent != null)
+            deathEvent.Invoke();
+    }
 
     /// <summary>
     /// Checks if the object is invincible, and if so, updates the elapsed time. If the elapsed time is greater than the invincibility time, the object is no longer invincible.

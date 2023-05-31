@@ -235,6 +235,10 @@ PrefabInstance:
       propertyPath: speed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 36197665674893627, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 36197665674893629, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -492,6 +496,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7012217713500204286, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113797690667707442, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3255866
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113797690667707442, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5535
+      objectReference: {fileID: 0}
     - target: {fileID: 9113797690742787784, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -540,17 +556,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9113797690742787795, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9113797690742787796, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: _airSpeed
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9113797690742787796, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: _jumpPower
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9113797690742787796, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: _groundSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113797690742787796, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: _hasDoubleJump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113797690742787798, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113797690883842718, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}

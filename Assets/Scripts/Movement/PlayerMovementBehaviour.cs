@@ -23,7 +23,14 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private float _jumpPower;
     [Tooltip("How many times the player can jump before hitting the ground.")]
     [SerializeField]
-    public bool _hasDoubleJump;
+    private bool _hasDoubleJump;
+
+
+    public bool HasDoubleJump
+    {
+        get { return _hasDoubleJump; }
+        set { _hasDoubleJump = value; }
+    }
 
     [SerializeField]
     private GroundColliderBehaviour _groundCollider;
@@ -60,19 +67,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
             _rb.velocity = _jumpVelocity;
 
             //Removes the doublejump from the player
-            _hasDoubleJump = false;
-        }
-
-        //Checks to see if the player is on the ground and has an extra jump
-        if (!_groundCollider.IsGrounded && _hasDoubleJump == true )
-        {
-            //Force to adjust player by
-            _jumpVelocity = new Vector3(0, 1, 0) * _jumpPower;
-
-            //Adjusts the player position
-            _rb.velocity = _jumpVelocity;
-        
-            //Decrement jumpcount for the player
             _hasDoubleJump = false;
         }
     }

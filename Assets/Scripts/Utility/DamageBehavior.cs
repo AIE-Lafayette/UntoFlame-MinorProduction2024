@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utility.ObjectPool;
 
 
 
@@ -49,7 +50,7 @@ public class DamageBehavior : MonoBehaviour
     public void ApplyDamage(Vector3 knockbackDirection, float knockbackForce=0)
     {
         if (IsInvincible) return;
-        
+
         _rigidbody.velocity = Vector3.zero;
 		_rigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
 
@@ -66,6 +67,9 @@ public class DamageBehavior : MonoBehaviour
     {
         if (deathEvent != null)
             deathEvent.Invoke();
+        
+        gameObject.SetActive(false);
+            
     }
 
     /// <summary>

@@ -45,9 +45,5 @@ public class InputBehaviour : MonoBehaviour
         _moveBehaviour = GetComponent<PlayerMovementBehaviour>();
     }
 
-    //Update is called once per frame
-    void Update()
-    {
-        
-    }   
+  
 }

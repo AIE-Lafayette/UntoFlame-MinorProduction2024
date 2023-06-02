@@ -9,14 +9,15 @@ TagManager:
   - Enemy
   - Weapon
   - PlayerHit
+  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GroundBoundary
   - Water
   - UI
-  - 
+  - ScreenBoundary
   - 
   - 
   - 

@@ -18,14 +18,12 @@ public class GroundColliderBehaviour : MonoBehaviour
         //If the player is on the ground...
         if (other.CompareTag("Ground"))
         {
-            Debug.Log("Grounded");
             //...set "IsGrounded" to be true..
             IsGrounded = true;
             //...as well as set the player to have a doublejump  
-            _moveBehaviour._hasDoubleJump = true;
+            _moveBehaviour.HasDoubleJump = true;
         }
-
-        else
+        else if (!other.CompareTag("Ground"))
         {
             //...set "IsGrounded" to be false..
             IsGrounded = false;
@@ -38,12 +36,16 @@ public class GroundColliderBehaviour : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
+        if (!other.CompareTag("Ground"))
+        {
+            return;
+        }
         //When the player leaves the ground...
         
             //...set "IsGrounded" to be false
             IsGrounded = false;
 
-        _moveBehaviour._hasDoubleJump = true;
+        _moveBehaviour.HasDoubleJump = true;
 
     }
 }

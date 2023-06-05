@@ -7,11 +7,11 @@ using UnityEngine.InputSystem;
 public class UIManager : MonoBehaviour
 {
 
-    [SerializeField, Tooltip("The text object that displays the score.")]
-    private Text _scoreText;
+    [SerializeField, Tooltip("A list of text objects that display the score.")]
+    private Text[] _scoreTexts;
 
-	[SerializeField, Tooltip("The text object that displays the high score.")]
-	private Text _highScoreText;
+	[SerializeField, Tooltip("A list of text objects that displays the high score.")]
+	private Text[] _highScoreTexts;
 
 	[SerializeField, Tooltip("The game object that is displayed when the player dies.")]
 	private GameObject _gameOverScreen;
@@ -72,6 +72,22 @@ public class UIManager : MonoBehaviour
 		GameManager.Instance.StartGame();
 	}
 
+	private void UpdateHighScoreText()
+	{
+		for (int i = 0; i < _highScoreTexts.Length; i++)
+		{
+			_highScoreTexts[i].text = "High Score: " + GameManager.Instance.HighScore.Value.ToString();
+		}
+	}
+
+	private void UpdateScoreText()
+	{
+		for (int i = 0; i < _scoreTexts.Length; i++)
+		{
+			_scoreTexts[i].text = "Score: " + GameManager.Instance.Score.Value.ToString();
+		}
+	}
+
 	/// <summary>
 	/// Pauses the game and shows the pause screen if it exists.
 	/// </summary>
@@ -95,19 +111,23 @@ public class UIManager : MonoBehaviour
 	private void Awake()
 	{
 		if (_gameOverScreen)
-			GameManager.Instance.Player.GetComponent<DamageBehavior>().AddDeathEventListener(_=>_gameOverScreen.SetActive(true)); 
+			GameManager.Instance.Player.GetComponent<DamageBehavior>().AddDeathEventListener(_=>{
+				_gameOverScreen.SetActive(true);
+
+				UpdateHighScoreText();
+			}); 
 	}
 
 	private void Start()
 	{
-
-		if (_highScoreText)
-			_highScoreText.text = "High Score: " + GameManager.Instance.HighScore.Value.ToString();
+		for (int i = 0; i < _highScoreTexts.Length; i++)
+		{
+			_highScoreTexts[i].text = "High Score: " + GameManager.Instance.HighScore.Value.ToString();
+		}
 	}
 
     private void Update()
     {
-		if(_scoreText)
-        	_scoreText.text = "Score: " + GameManager.Instance.Score.Value.ToString();
+		UpdateScoreText();
     }
 }

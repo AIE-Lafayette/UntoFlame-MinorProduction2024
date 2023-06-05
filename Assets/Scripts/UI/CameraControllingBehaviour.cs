@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CameraControllingBehaviour : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField, Tooltip("The variable that determines camera movement speed.")] private float speed = 5f;
 
-    [SerializeField] private Rigidbody _rigidBody;
+    [SerializeField, Tooltip("The rigidbody of the gameObject that this script will be attached to.")] private Rigidbody _rigidBody;
 
     // Update is called once per frame
     void Update()

@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
 	public float GameSpeedMultiplier {get; private set;}
 
+
 	private static GameManager _instance;
 	public static GameManager Instance
 	{

@@ -73,7 +73,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     public void Sweep()
     {
-        gameObject.SetActive(true);
+        DamageBehavior damageBehavior = new DamageBehavior();
     }
 
     // Update is called once per frame

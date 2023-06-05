@@ -19,7 +19,7 @@ public class ChunkSpawnerBehaviour : MonoBehaviour
     [SerializeField, Tooltip("The map chunks that will be spawned in.")]
     private GameObject[] _mapChunk;
 
-    [SerializeField]
+    [SerializeField, Tooltip("The screen boundary in scene that this script will look at in order to determine when to spawn a new mapChunk.")]
     private ScreenBoundaryBehaviour _screenBoundary;
 
     public static ChunkSpawnerBehaviour Instance

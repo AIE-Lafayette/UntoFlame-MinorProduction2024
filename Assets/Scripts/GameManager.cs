@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Starts the game, loading the main scene and resetting the score and game speed multiplier.
+	/// </summary>
 	public void StartGame()
 	{
 		SceneManager.LoadScene(1);

@@ -7,19 +7,16 @@ using UnityEngine.InputSystem;
 public class UIManager : MonoBehaviour
 {
 
-    [SerializeField]
+    [SerializeField, Tooltip("The text object that displays the score.")]
     private Text _scoreText;
 
-	[SerializeField]
+	[SerializeField, Tooltip("The text object that displays the high score.")]
 	private Text _highScoreText;
 
-	[SerializeField]
+	[SerializeField, Tooltip("The game object that is displayed when the player dies.")]
 	private GameObject _gameOverScreen;
-	[SerializeField]
+	[SerializeField, Tooltip("The game object that is displayed when the player pauses the game.")]
 	private GameObject _pauseScreen;
-
-	[SerializeField]
-	private GameObject _eventSystem;
 
 	private static UIManager _instance;
 	public static UIManager Instance
@@ -40,7 +37,7 @@ public class UIManager : MonoBehaviour
 	}
 	
 	/// <summary>
-	/// Resumes gameplay.
+	/// Resumes gameplay, resetting time scale back to 1.
 	/// </summary>
 	public void Resume()
 	{
@@ -48,7 +45,7 @@ public class UIManager : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Quits the game.
+	/// Exits the application.
 	/// </summary>
 	public void Quit()
 	{
@@ -56,7 +53,7 @@ public class UIManager : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Returns to the start menu.
+	/// Returns the player to the start menu, resetting the time scale and setting their high score.
 	/// </summary>
 	public void ReturnToStart()
 	{	
@@ -68,7 +65,7 @@ public class UIManager : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Starts the game.
+	/// Calls the Game Manager's StartGame method.
 	/// </summary>
 	public void StartGame()
 	{	
@@ -103,8 +100,6 @@ public class UIManager : MonoBehaviour
 
 	private void Start()
 	{
-		if (_eventSystem)
-			_eventSystem.SetActive(true);
 
 		if (_highScoreText)
 			_highScoreText.text = "High Score: " + GameManager.Instance.HighScore.Value.ToString();

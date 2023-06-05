@@ -8,9 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: b404f314618774944aa5f8d5ae955279
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Bryon_Scene.unity
-    guid: 87a2c360facbe1c4abb753dbc5bcf447
+    guid: 7a1453ffb9b5c6d4eb3ae44ca279933b
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: ed0d71f8e85599a46909ae7810abe086

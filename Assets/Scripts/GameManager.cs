@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 	public GameObject Player;
 
 	[Tooltip("The game score.")]
-	public int Score = 0;
+	public int Score;
 
 	public float GameSpeedMultiplier {get; private set;}
 
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
 	public void StartGame()
 	{
-		SceneManager.LoadScene(2);
+		SceneManager.LoadScene(1);
 		// Reset the score
 		Score = 0;
 
@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	private float timePassed;
+	
 	private void Update() 
 	{
 		timePassed += Time.deltaTime;
@@ -51,5 +52,8 @@ public class GameManager : MonoBehaviour
 			if (GameSpeedMultiplier < 5)
 				GameSpeedMultiplier += 0.01f;
 		}
+
+		if (Input.GetKeyDown(KeyCode.P))
+			GameManager.Instance.StartGame();
 	}
 }

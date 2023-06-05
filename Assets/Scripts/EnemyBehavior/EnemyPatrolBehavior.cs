@@ -28,6 +28,9 @@ namespace EnemyBehavior
 			_target = _patrolPoints[1].position;
 		}
 
+		/// <summary>
+		/// Moves to each patrol point in order. Will wait at each point for the specified amount of time.
+		/// </summary>
 		void FixedUpdate()
 		{
 			transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);

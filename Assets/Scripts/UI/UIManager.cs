@@ -69,6 +69,9 @@ public class UIManager : MonoBehaviour
 		GameManager.Instance.StartGame();
 	}
 
+	/// <summary>
+	/// Updates the high score text box with the high score from the GameManager.
+	/// </summary>
 	private void UpdateHighScoreText()
 	{
 		for (int i = 0; i < _highScoreTexts.Length; i++)
@@ -77,6 +80,9 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Updates the score text box with the score from the GameManager.
+	/// </summary>
 	private void UpdateScoreText()
 	{
 		for (int i = 0; i < _scoreTexts.Length; i++)

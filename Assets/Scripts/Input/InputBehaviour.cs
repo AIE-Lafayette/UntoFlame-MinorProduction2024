@@ -39,6 +39,12 @@ public class InputBehaviour : MonoBehaviour
         _moveBehaviour.Jump();
     }
 
+    private void Sweep(InputAction.CallbackContext context)
+    {
+        float sweep = context.ReadValue<float>();
+        _moveBehaviour.Sweep();
+    }
+
     // Start is called before the first frame update
     void Start()
     {

@@ -56,10 +56,7 @@ public class UIManager : MonoBehaviour
 	/// Returns the player to the start menu, resetting the time scale and setting their high score.
 	/// </summary>
 	public void ReturnToStart()
-	{	
-		if (GameManager.Instance.Score.Value > GameManager.Instance.HighScore.Value)
-			GameManager.Instance.HighScore.Value = GameManager.Instance.Score.Value;
-			
+	{		
 		Resume();
 		SceneManager.LoadScene(0);
 	}
@@ -72,6 +69,9 @@ public class UIManager : MonoBehaviour
 		GameManager.Instance.StartGame();
 	}
 
+	/// <summary>
+	/// Updates the high score text box with the high score from the GameManager.
+	/// </summary>
 	private void UpdateHighScoreText()
 	{
 		for (int i = 0; i < _highScoreTexts.Length; i++)
@@ -80,6 +80,9 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Updates the score text box with the score from the GameManager.
+	/// </summary>
 	private void UpdateScoreText()
 	{
 		for (int i = 0; i < _scoreTexts.Length; i++)

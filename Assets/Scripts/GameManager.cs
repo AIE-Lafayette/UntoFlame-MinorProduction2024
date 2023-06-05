@@ -9,7 +9,10 @@ public class GameManager : MonoBehaviour
 	public GameObject Player;
 
 	[Tooltip("The game score.")]
-	public int Score;
+	public Integer_SO Score;
+
+	[Tooltip("The high score.")]
+	public Integer_SO HighScore;
 
 	public float GameSpeedMultiplier {get; private set;}
 
@@ -31,11 +34,14 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Starts the game, loading the main scene and resetting the score and game speed multiplier.
+	/// </summary>
 	public void StartGame()
 	{
 		SceneManager.LoadScene(1);
 		// Reset the score
-		Score = 0;
+		Score.Value = 0;
 
 		// Reset the game speed
 		GameSpeedMultiplier = 1;
@@ -45,6 +51,8 @@ public class GameManager : MonoBehaviour
 	
 	private void Update() 
 	{
+		Score.Value = Score.Value + 1;
+
 		timePassed += Time.deltaTime;
 		if (timePassed > 1)
 		{

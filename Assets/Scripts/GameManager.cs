@@ -51,8 +51,6 @@ public class GameManager : MonoBehaviour
 	
 	private void Update() 
 	{
-		Score.Value = Score.Value + 1;
-
 		timePassed += Time.deltaTime;
 		if (timePassed > 1)
 		{
@@ -61,7 +59,7 @@ public class GameManager : MonoBehaviour
 				GameSpeedMultiplier += 0.01f;
 		}
 
-		if (Input.GetKeyDown(KeyCode.P))
-			GameManager.Instance.StartGame();
+		if (Score.Value > HighScore.Value)
+			HighScore.Value = Score.Value;		
 	}
 }

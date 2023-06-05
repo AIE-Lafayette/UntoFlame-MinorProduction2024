@@ -23,9 +23,11 @@ namespace Utility.Projectiles
 
 				Vector3 knockbackDirection = new Vector3(-Mathf.Cos(angleRadians), Mathf.Sin(angleRadians), 0);
 		
-				damageBehavior.ApplyDamage(knockbackDirection, _knockbackForce);
-				ObjectPoolBehavior.Instance.ReturnObject(gameObject);
+				damageBehavior.ApplyDamage(knockbackDirection, _knockbackForce);		
 			}
+
+			if (!other.CompareTag("Enemy"))
+				ObjectPoolBehavior.Instance.ReturnObject(gameObject);
 		}
 	}
 }

@@ -15,6 +15,8 @@ public class InputBehaviour : MonoBehaviour
         _playerActions = new PlayerActions();
         _playerActions.Character.Movement.performed += Move;
         _playerActions.Character.Jump.performed += Jump;
+
+        _playerActions.Character.Pause.performed += Pause;
     }
 
     private void OnEnable()
@@ -25,6 +27,11 @@ public class InputBehaviour : MonoBehaviour
     private void OnDisable()
     {
         _playerActions.Disable();
+    }
+
+    private void Pause(InputAction.CallbackContext context)
+    {
+        UIManager.Instance.Pause();
     }
 
     private void Move(InputAction.CallbackContext context)

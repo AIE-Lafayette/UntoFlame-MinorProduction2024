@@ -9,7 +9,7 @@ public class CameraControllingBehaviour : MonoBehaviour
     [SerializeField] private Rigidbody _rigidBody;
 
     // Update is called once per frame
-    void Start()
+    void Update()
     {
         //Move the camera body to the right of the screen.
         _rigidBody.velocity = new Vector3(speed, 0, 0);

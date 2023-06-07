@@ -35,6 +35,12 @@ public class PlayerMovementBehaviour : MonoBehaviour
         set { _hasDoubleJump = value; }
     }
 
+    public bool IsSweeping
+    {
+        get { return _isSweeping; }
+        set { _isSweeping = value; }
+    }
+
     [SerializeField]
     private GroundColliderBehaviour _groundCollider;
 

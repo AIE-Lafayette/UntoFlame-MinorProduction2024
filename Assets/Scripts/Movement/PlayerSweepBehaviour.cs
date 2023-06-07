@@ -13,7 +13,7 @@ public class PlayerSweepBehaviour : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.J))
         {
-            IsSweeping = true;
+            _moveBehaviour.IsSweeping = true;
         }
 
         if(IsSweeping == true)

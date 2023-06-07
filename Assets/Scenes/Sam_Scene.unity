@@ -128,7 +128,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1855762560276524943, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
   m_PrefabInstance: {fileID: 598638724}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &254198650
+--- !u!114 &254198654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ecf6bf743646bf4885d700ca31feaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsSweeping: 0
 --- !u!1001 &580023262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -312,6 +313,10 @@ PrefabInstance:
     - target: {fileID: 9113797690742787796, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: _jumpPower
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113797690742787796, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: _isSweeping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9113797690742787796, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: _groundSpeed
@@ -640,8 +645,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 598638725}
-  Score: {fileID: 0}
-  HighScore: {fileID: 0}
+  Score: {fileID: 11400000, guid: b1bc27ab97bb34847ac083701703d071, type: 2}
+  HighScore: {fileID: 11400000, guid: 7a70e02f4b130dc41b586934c279bb95, type: 2}
 --- !u!4 &1910768396
 Transform:
   m_ObjectHideFlags: 0

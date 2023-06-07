@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &254198648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1855762560276524943, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+  m_PrefabInstance: {fileID: 598638724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &254198650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254198648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ecf6bf743646bf4885d700ca31feaf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &580023262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -223,6 +240,10 @@ PrefabInstance:
     - target: {fileID: 1855762560276524943, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999615012407113488, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: _invincibilityTime
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5257929977400114059, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: m_IsTrigger
@@ -619,7 +640,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 598638725}
-  Score: 0
+  Score: {fileID: 0}
+  HighScore: {fileID: 0}
 --- !u!4 &1910768396
 Transform:
   m_ObjectHideFlags: 0

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
-
+    
     private Rigidbody _rb;
     private Vector3 _moveDirection;
     private Vector3 _jumpVelocity;
+
+    [SerializeField]
+    private bool _isSweeping = false;
 
     [Header("Player Speeds")]
     [Tooltip("Controls the speed of the player while on the ground.")]
@@ -70,10 +73,15 @@ public class PlayerMovementBehaviour : MonoBehaviour
             _hasDoubleJump = false;
         }
     }
-
-    public void Sweep()
+public void Sweep()
     {
-        DamageBehavior damageBehavior = new DamageBehavior();
+        
+        if (_isSweeping == true)
+        {
+            //DamageBehavior damageBehavior = new DamageBehavior();
+            gameObject.SetActive(true);
+        }
+
     }
 
     // Update is called once per frame

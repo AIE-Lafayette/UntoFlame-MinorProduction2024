@@ -132,5 +132,10 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
 		UpdateScoreText();
+
+		if (Input.GetKeyDown(KeyCode.E))
+		{
+			CameraControllingBehaviour.ScreenShake.ShakeSustain(0.5f, 1.3f, 0.25f, 3f, 1f);
+		}
     }
 }

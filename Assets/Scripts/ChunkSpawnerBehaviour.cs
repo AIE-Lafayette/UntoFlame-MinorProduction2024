@@ -7,20 +7,12 @@ public delegate void ChunkEvent(GameObject chunk);
 
 public class ChunkSpawnerBehaviour : MonoBehaviour
 {
-    private ChunkEvent _chunkDespawn;
-    private ChunkEvent _chunkSpawn;
 
     private static ChunkSpawnerBehaviour _instance;
-
-    public void AddChunkDespawnListener(ChunkEvent listener) => _chunkDespawn += listener;
-    public void AddChunkSpawnListener(ChunkEvent listener) => _chunkSpawn += listener;
-
 
     [SerializeField, Tooltip("The map chunks that will be spawned in.")]
     private GameObject[] _mapChunk;
 
-    [SerializeField, Tooltip("The screen boundary in scene that this script will look at in order to determine when to spawn a new mapChunk.")]
-    private ScreenBoundaryBehaviour _screenBoundary;
 
     public static ChunkSpawnerBehaviour Instance
     {

@@ -772,7 +772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &553588717
 Transform:
   m_ObjectHideFlags: 0
@@ -800,6 +800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3ecbc29ee7a414cbff68da7aeb21a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chunkSpawner: {fileID: 1127278955}
 --- !u!54 &553588719
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1141,6 +1142,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676541239}
   m_CullTransparentMesh: 1
+--- !u!114 &723684895 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
+  m_PrefabInstance: {fileID: 8872748607482106512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba028d9f1057eb429db103ab4f5e914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &751269473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1402,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1030762752
 Transform:
   m_ObjectHideFlags: 0
@@ -1420,7 +1432,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mapChunk:
   - {fileID: 1296659093653271150, guid: a9e9ac1faf9425e4fadf036dcbe685c9, type: 3}
-  _screenBoundary: {fileID: 1441878776}
 --- !u!1 &1037674930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,7 +1774,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mapChunk:
   - {fileID: 1300622734804294516, guid: 866b436123c121344ab9fb3ae9d0c77d, type: 3}
-  _screenBoundary: {fileID: 1434170637}
 --- !u!1 &1127278953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,7 +1790,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1127278954
 Transform:
   m_ObjectHideFlags: 0
@@ -1789,7 +1799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127278953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45, y: -5.5, z: 411}
+  m_LocalPosition: {x: 60, y: -5.5, z: 411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1810,7 +1820,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mapChunk:
   - {fileID: 4576264593311196171, guid: 7c3ea31b98f70254c8a31de215e768f8, type: 3}
-  _screenBoundary: {fileID: 553588718}
 --- !u!1 &1410727289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,6 +2100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3ecbc29ee7a414cbff68da7aeb21a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chunkSpawner: {fileID: 0}
 --- !u!54 &1434170638
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2153,7 +2163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1441878775
 Transform:
   m_ObjectHideFlags: 0
@@ -2181,6 +2191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3ecbc29ee7a414cbff68da7aeb21a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chunkSpawner: {fileID: 1030762753}
 --- !u!54 &1441878777
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3031,5 +3042,9 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8872748607860525043, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
+      propertyPath: _chunkSpawner
+      value: 
+      objectReference: {fileID: 723684895}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}

@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShooterEnemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3769468121841427059, guid: 57529189541247b449c0f8ae5ae087b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4617159970535546961, guid: 57529189541247b449c0f8ae5ae087b7, type: 3}
       propertyPath: m_RootOrder
       value: 2

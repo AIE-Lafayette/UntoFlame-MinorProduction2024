@@ -190,6 +190,8 @@ public class ScreenShakeBehavior : MonoBehaviour
     {
         if (_fadeOutDuration == 0)
             StartFadeOut(duration);
+
+        transform.localEulerAngles = _initialRotation;
     }
 
     /// <summary>
@@ -224,7 +226,10 @@ public class ScreenShakeBehavior : MonoBehaviour
         if (_shakeDuration > 0  && _elapsedTime >= _shakeDuration)
         {
             _elapsedTime = 0;
-            StopShake();
+            if (!_sustain)
+                StopShake();
+            else
+                StopSustained();
         }
     }
 }

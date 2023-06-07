@@ -7,18 +7,23 @@ namespace Utility.Projectiles
 {
 	public class BulletBehavior : MonoBehaviour
 	{
-		[SerializeField, Tooltip("The time in seconds before the bullet automatically despawns.")]
-		private float _lifetime;
+		[SerializeField]
+		private float _knockbackForce;
+		[SerializeField]
+		private float _knockbackAngle;
 
-		private float _elapsedTime = 0;
-
-		private void Update()
+		private void OnTriggerEnter(Collider other)
 		{
-			_elapsedTime += Time.deltaTime;
-
-			if (_elapsedTime >= _lifetime)
+			if (other.CompareTag("Player"))
 			{
-				_elapsedTime = 0;
+				DamageBehavior damageBehavior = other.GetComponent<DamageBehavior>();
+				if (!damageBehavior) return;
+
+				float angleRadians = _knockbackAngle * Mathf.Deg2Rad;
+
+				Vector3 knockbackDirection = new Vector3(-Mathf.Cos(angleRadians), Mathf.Sin(angleRadians), 0);
+		
+				damageBehavior.ApplyDamage(knockbackDirection, _knockbackForce);
 				ObjectPoolBehavior.Instance.ReturnObject(gameObject);
 			}
 		}

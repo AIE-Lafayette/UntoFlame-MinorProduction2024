@@ -9,8 +9,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private Vector3 _moveDirection;
     private Vector3 _jumpVelocity;
 
-    [SerializeField]
-    private bool _isSweeping = false;
 
     [Header("Player Speeds")]
     [Tooltip("Controls the speed of the player while on the ground.")]
@@ -33,12 +31,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
     {
         get { return _hasDoubleJump; }
         set { _hasDoubleJump = value; }
-    }
-
-    public bool IsSweeping
-    {
-        get { return _isSweeping; }
-        set { _isSweeping = value; }
     }
 
     [SerializeField]
@@ -78,16 +70,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
             //Removes the doublejump from the player
             _hasDoubleJump = false;
         }
-    }
-public void Sweep()
-    {
-        
-        if (_isSweeping == true)
-        {
-            //DamageBehavior damageBehavior = new DamageBehavior();
-            gameObject.SetActive(true);
-        }
-
     }
 
     // Update is called once per frame

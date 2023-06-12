@@ -8,13 +8,13 @@ public class CameraControllingBehaviour : MonoBehaviour
 
     [SerializeField, Tooltip("The rigidbody of the gameObject that this script will be attached to.")] private Rigidbody _rigidBody;
 
+    public static ScreenShakeBehavior ScreenShake;
+
     private bool _shouldCameraMove = true;
 
-    private Vector3 _initialPosition;
-
-    private void Start()
+    private void Awake()
     {
-        _initialPosition = transform.localPosition;
+        ScreenShake = GetComponent<ScreenShakeBehavior>();
     }
 
     // Update is called once per frame

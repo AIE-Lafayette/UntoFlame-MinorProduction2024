@@ -5,15 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-	[Tooltip("The player object.")]
+	[SerializeField, Tooltip("The player object.")]
 	private GameObject _player;
-
-	[Tooltip("The game score.")]
+	
 	private Integer_SO _score;
 
-	[Tooltip("The high score.")]
 	private Integer_SO _highScore;
-
+	
 	private int _mapComplexityModifier = 0;
 
 	private float _gameSpeedMultiplier;

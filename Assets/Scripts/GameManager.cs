@@ -45,9 +45,7 @@ public class GameManager : MonoBehaviour
 	{
 		get {return _gameSpeedMultiplier;}
 	}
-
-
-
+	
 	private static GameManager _instance;
 	public static GameManager Instance
 	{
@@ -69,6 +67,7 @@ public class GameManager : MonoBehaviour
 	/// <summary>
 	/// Starts the game, loading the main scene and resetting the score and game speed multiplier.
 	/// </summary>
+	/// 
 	public void StartGame()
 	{
 		SceneManager.LoadScene(1);
@@ -82,6 +81,9 @@ public class GameManager : MonoBehaviour
 	private void UpdateComplexityModifier()
 	{
 		int modifier = Mathf.FloorToInt(Score.Value / 300);
+
+		if (modifier > 2)
+			modifier = 2;
 
 		if (modifier > MapComplexityModifier)
 		{

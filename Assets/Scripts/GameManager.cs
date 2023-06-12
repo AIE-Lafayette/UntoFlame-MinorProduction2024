@@ -6,17 +6,46 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 	[Tooltip("The player object.")]
-	public GameObject Player;
+	private GameObject _player;
 
 	[Tooltip("The game score.")]
-	public Integer_SO Score;
+	private Integer_SO _score;
 
 	[Tooltip("The high score.")]
-	public Integer_SO HighScore;
+	private Integer_SO _highScore;
 
-	public int MapComplexityModifier = 0;
+	private int _mapComplexityModifier = 0;
 
-	public float GameSpeedMultiplier {get; private set;}
+	private float _gameSpeedMultiplier;
+
+	public GameObject Player
+	{
+		get {return _player;}
+	}
+
+	public Integer_SO Score
+	{
+		get {return _score;}
+		set {_score = value;}
+	}
+
+	public Integer_SO HighScore
+	{
+		get {return _highScore;}
+		set {_highScore = value;}
+	}
+
+	public int MapComplexityModifier
+	{
+		get {return _mapComplexityModifier;}
+		set {_mapComplexityModifier = value;}
+	}
+
+	public float GameSpeedMultiplier
+	{
+		get {return _gameSpeedMultiplier;}
+	}
+
 
 
 	private static GameManager _instance;
@@ -47,7 +76,7 @@ public class GameManager : MonoBehaviour
 		Score.Value = 0;
 
 		// Reset the game speed
-		GameSpeedMultiplier = 1;
+		_gameSpeedMultiplier = 1;
 	}
 
 	private void UpdateComplexityModifier()
@@ -56,7 +85,7 @@ public class GameManager : MonoBehaviour
 
 		if (modifier > MapComplexityModifier)
 		{
-			GameSpeedMultiplier = 1 + (modifier * 0.1f);
+			_gameSpeedMultiplier = 1 + (modifier * 0.1f);
 			MapComplexityModifier = modifier;
 		}
 	}
@@ -69,8 +98,8 @@ public class GameManager : MonoBehaviour
 		if (timePassed > 1)
 		{
 			timePassed = 0;
-			if (GameSpeedMultiplier < 5)
-				GameSpeedMultiplier += 0.01f;
+			if (_gameSpeedMultiplier < 5)
+				_gameSpeedMultiplier += 0.01f;
 		}
 
 		if (Score.Value > HighScore.Value)

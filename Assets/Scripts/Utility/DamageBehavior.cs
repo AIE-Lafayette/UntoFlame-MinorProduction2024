@@ -8,7 +8,7 @@ using Utility.ObjectPool;
 [RequireComponent(typeof(Rigidbody))]
 public class DamageBehavior : MonoBehaviour
 {
-    public delegate void DamageEvent();
+    public delegate void DamageEvent(DamageBehavior damageBehavior);
 
     private bool _isInvincible = false;
     private Rigidbody _rigidbody;
@@ -57,7 +57,7 @@ public class DamageBehavior : MonoBehaviour
         IsInvincible = true;
 
         if (damageEvent != null)
-            damageEvent.Invoke();
+            damageEvent.Invoke(this);
     }
 
     /// <summary>
@@ -66,7 +66,7 @@ public class DamageBehavior : MonoBehaviour
     public void Kill()
     {
         if (deathEvent != null)
-            deathEvent.Invoke();
+            deathEvent.Invoke(this);
         
         gameObject.SetActive(false);
             

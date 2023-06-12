@@ -5,13 +5,48 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-	[Tooltip("The player object.")]
-	public GameObject Player;
+	[SerializeField, Tooltip("The player object.")]
+	private GameObject _player;
 
-	[Tooltip("The game score.")]
-	public int Score;
+	[SerializeField, Tooltip("The score.")]
+	private Integer_SO _score;
 
-	public float GameSpeedMultiplier {get; private set;}
+	[SerializeField, Tooltip("The high score.")]
+	private Integer_SO _highScore;
+	
+	private int _mapComplexityModifier = 0;
+
+	private float _gameSpeedMultiplier = 1;
+
+	public GameObject Player
+	{
+		get {return _player;}
+	}
+
+	public Integer_SO Score
+	{
+		get {return _score;}
+		set {_score = value;}
+	}
+
+	public Integer_SO HighScore
+	{
+		get {return _highScore;}
+		set {_highScore = value;}
+	}
+
+	public int MapComplexityModifier
+	{
+		get {return _mapComplexityModifier;}
+		set {_mapComplexityModifier = value;}
+	}
+
+	public float GameSpeedMultiplier
+	{
+		get {return _gameSpeedMultiplier;}
+	}
+
+
 
 	private static GameManager _instance;
 	public static GameManager Instance
@@ -31,14 +66,28 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Starts the game, loading the main scene and resetting the score and game speed multiplier.
+	/// </summary>
 	public void StartGame()
 	{
 		SceneManager.LoadScene(1);
 		// Reset the score
-		Score = 0;
+		Score.Value = 0;
 
 		// Reset the game speed
-		GameSpeedMultiplier = 1;
+		_gameSpeedMultiplier = 1;
+	}
+
+	private void UpdateComplexityModifier()
+	{
+		int modifier = Mathf.FloorToInt(Score.Value / 300);
+
+		if (modifier > MapComplexityModifier)
+		{
+			_gameSpeedMultiplier = 1 + (modifier * 0.1f);
+			MapComplexityModifier = modifier;
+		}
 	}
 
 	private float timePassed;
@@ -49,11 +98,13 @@ public class GameManager : MonoBehaviour
 		if (timePassed > 1)
 		{
 			timePassed = 0;
-			if (GameSpeedMultiplier < 5)
-				GameSpeedMultiplier += 0.01f;
+			if (_gameSpeedMultiplier < 5)
+				_gameSpeedMultiplier += 0.01f;
 		}
 
-		if (Input.GetKeyDown(KeyCode.P))
-			GameManager.Instance.StartGame();
+		if (Score.Value > HighScore.Value)
+			HighScore.Value = Score.Value;
+
+		UpdateComplexityModifier();
 	}
 }

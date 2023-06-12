@@ -7,29 +7,10 @@ namespace Utility.Projectiles
 {
 	public class BulletBehavior : MonoBehaviour
 	{
-		[SerializeField, Tooltip("The time in seconds before the bullet automatically despawns.")]
-		private float _lifetime;
-		private float _elapsedTime = 0;
-
-		private bool _isFire;
-
-		[Tooltip("Determines if the bullet is fire. If so, it will kill the player.")]
-		public bool IsFire
-		{
-			get { return _isFire; }
-			private set { _isFire = value; }
-		}
-
-		private void Update()
-		{
-			_elapsedTime += Time.deltaTime;
-
-			if (_elapsedTime >= _lifetime)
-			{
-				_elapsedTime = 0;
-				ObjectPoolBehavior.Instance.ReturnObject(gameObject);
-			}
-		}
+		[SerializeField]
+		private float _knockbackForce;
+		[SerializeField]
+		private float _knockbackAngle;
 
 		private void OnTriggerEnter(Collider other)
 		{
@@ -37,15 +18,16 @@ namespace Utility.Projectiles
 			{
 				DamageBehavior damageBehavior = other.GetComponent<DamageBehavior>();
 				if (!damageBehavior) return;
-				if (!_isFire)
-					damageBehavior.ApplyDamage(transform.forward);
-				else
-					damageBehavior.Kill();
 
-				ObjectPoolBehavior.Instance.ReturnObject(gameObject);
+				float angleRadians = _knockbackAngle * Mathf.Deg2Rad;
 
-
+				Vector3 knockbackDirection = new Vector3(-Mathf.Cos(angleRadians), Mathf.Sin(angleRadians), 0);
+		
+				damageBehavior.ApplyDamage(knockbackDirection, _knockbackForce);		
 			}
+
+			if (!other.CompareTag("Enemy"))
+				ObjectPoolBehavior.Instance.ReturnObject(gameObject);
 		}
 	}
 }

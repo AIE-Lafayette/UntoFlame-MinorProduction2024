@@ -14,6 +14,7 @@ public class ChunkSpawnerBehaviour : MonoBehaviour
 
     public void AddChunkDespawnListener(ChunkEvent listener) => _chunkDespawn += listener;
     public void AddChunkSpawnListener(ChunkEvent listener) => _chunkSpawn += listener;
+    private int _currentComplexityIndex = 0;
 
 
     [SerializeField, Tooltip("The map chunks that will be spawned in.")]
@@ -48,13 +49,24 @@ public class ChunkSpawnerBehaviour : MonoBehaviour
         SpawnChunk();
     }
 
+    private int GetNext()
+    {
+        _currentComplexityIndex += 1;
+        if (_currentComplexityIndex > GameManager.Instance.MapComplexityModifier)
+        {
+            _currentComplexityIndex = GameManager.Instance.MapComplexityModifier;
+        }
+
+        return _currentComplexityIndex;
+    }
+
     public void SpawnChunk()
     {
         int randomNumber = Random.Range(0, _mapChunk.Length);
 
         Vector3 spawnPosition = new Vector3(Mathf.Floor(transform.position.x), transform.position.y, transform.position.z);
 
-        Instantiate(_mapChunk[randomNumber].Chunks[GameManager.Instance.MapComplexityModifier], spawnPosition, Quaternion.identity);
+        Instantiate(_mapChunk[randomNumber].Chunks[GetNext()], spawnPosition, Quaternion.identity);
 
 
     }

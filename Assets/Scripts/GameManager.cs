@@ -52,10 +52,13 @@ public class GameManager : MonoBehaviour
 
 	private void UpdateComplexityModifier()
 	{
-		MapComplexityModifier = Mathf.FloorToInt(Score.Value / 300);
+		int modifier = Mathf.FloorToInt(Score.Value / 300);
 
-		if (MapComplexityModifier > 2)
-			MapComplexityModifier = 2;
+		if (modifier > MapComplexityModifier)
+		{
+			GameSpeedMultiplier = 1 + (modifier * 0.1f);
+			MapComplexityModifier = modifier;
+		}
 	}
 
 	private float timePassed;

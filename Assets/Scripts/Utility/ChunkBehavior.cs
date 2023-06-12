@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ChunkBehavior : MonoBehaviour
+public class Chunk : ScriptableObject
 {
-    [SerializeField, Tooltip("A list of chunks sorted by complexity. The first chunk is the simplest, the last chunk is the most complex.")]
+[SerializeField]
     private GameObject[] _chunks;
 
     public GameObject[] Chunks

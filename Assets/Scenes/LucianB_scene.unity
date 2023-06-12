@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBuildingB_OptimizedExport_002
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 05cb07346f9189d49a782fced28fbaab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05cb07346f9189d49a782fced28fbaab, type: 3}
 --- !u!1001 &487132024
@@ -259,8 +263,69 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBuilding_C_Optimized
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 881237d1b38305d4cac0ed92f720ed72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881237d1b38305d4cac0ed92f720ed72, type: 3}
+--- !u!1001 &498516838
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.3563194
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 430.79282
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556490517368500424, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619254166578645569, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
+      propertyPath: m_Name
+      value: IndustrialBuildingDPrefab'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
 --- !u!1001 &630275748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377,6 +442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildingD_002
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3249f40078787e849879d3b8e32f63af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3249f40078787e849879d3b8e32f63af, type: 3}
 --- !u!1001 &1185463655
@@ -450,6 +519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildingC
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f49ea92f96c7101499a8ccbae4c95c1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49ea92f96c7101499a8ccbae4c95c1b, type: 3}
 --- !u!1001 &1586002092
@@ -511,6 +584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildingB
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3fc58b84b31ea941a7c627a7d576d01, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3fc58b84b31ea941a7c627a7d576d01, type: 3}
 --- !u!1001 &1747763557
@@ -571,6 +648,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c2249ac15eaccc4f9e69693de4664dd, type: 3}
       propertyPath: m_Name
       value: BuildingA
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c2249ac15eaccc4f9e69693de4664dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2249ac15eaccc4f9e69693de4664dd, type: 3}
@@ -835,7 +916,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2118245977
 GameObject:
@@ -950,7 +1031,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &8872748607482106512
 PrefabInstance:

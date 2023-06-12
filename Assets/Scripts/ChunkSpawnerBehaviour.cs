@@ -17,7 +17,7 @@ public class ChunkSpawnerBehaviour : MonoBehaviour
 
 
     [SerializeField, Tooltip("The map chunks that will be spawned in.")]
-    private GameObject[] _mapChunk;
+    private ChunkBehavior[] _mapChunk;
 
     [SerializeField, Tooltip("The screen boundary in scene that this script will look at in order to determine when to spawn a new mapChunk.")]
     private ScreenBoundaryBehaviour _screenBoundary;
@@ -54,7 +54,7 @@ public class ChunkSpawnerBehaviour : MonoBehaviour
 
         Vector3 spawnPosition = new Vector3(Mathf.Floor(transform.position.x), transform.position.y, transform.position.z);
 
-        Instantiate(_mapChunk[randomNumber], spawnPosition, Quaternion.identity);
+        Instantiate(_mapChunk[randomNumber].Chunks[GameManager.Instance.MapComplexityModifier], spawnPosition, Quaternion.identity);
 
 
     }

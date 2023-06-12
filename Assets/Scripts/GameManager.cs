@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 	[Tooltip("The high score.")]
 	public Integer_SO HighScore;
 
+	public int MapComplexityModifier = 0;
+
 	public float GameSpeedMultiplier {get; private set;}
 
 
@@ -48,6 +50,14 @@ public class GameManager : MonoBehaviour
 		GameSpeedMultiplier = 1;
 	}
 
+	private void UpdateComplexityModifier()
+	{
+		MapComplexityModifier = Mathf.FloorToInt(Score.Value / 300);
+
+		if (MapComplexityModifier > 2)
+			MapComplexityModifier = 2;
+	}
+
 	private float timePassed;
 	
 	private void Update() 
@@ -61,6 +71,8 @@ public class GameManager : MonoBehaviour
 		}
 
 		if (Score.Value > HighScore.Value)
-			HighScore.Value = Score.Value;		
+			HighScore.Value = Score.Value;
+
+		UpdateComplexityModifier();
 	}
 }

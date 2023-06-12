@@ -1948,6 +1948,7 @@ MonoBehaviour:
   Player: {fileID: 772119795}
   Score: {fileID: 11400000, guid: b1bc27ab97bb34847ac083701703d071, type: 2}
   HighScore: {fileID: 11400000, guid: 7a70e02f4b130dc41b586934c279bb95, type: 2}
+  MapComplexityModifier: 1
 --- !u!4 &1280380086
 Transform:
   m_ObjectHideFlags: 0
@@ -2315,24 +2316,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: _mapChunk.Array.size
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
+      propertyPath: _mapChunk.Array.data[0]
+      value: 
+      objectReference: {fileID: 2667494725920706528, guid: 75f3bf48f1bd44645b9e5a1df062b80f, type: 3}
     - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: _mapChunk.Array.data[1]
       value: 
-      objectReference: {fileID: 108958609906668369, guid: 25f911aa04b697746a056ac89a4a7e14, type: 3}
+      objectReference: {fileID: 5733306399834351853, guid: a9f89ec40550e6a4ebe1d8d82539031a, type: 3}
     - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: _mapChunk.Array.data[2]
       value: 
-      objectReference: {fileID: 3049004494007429362, guid: b93d1ff970ef2cc488001b223c33c33f, type: 3}
+      objectReference: {fileID: 5733306399834351853, guid: a9f89ec40550e6a4ebe1d8d82539031a, type: 3}
     - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: _mapChunk.Array.data[3]
       value: 
-      objectReference: {fileID: 4424267277951099536, guid: f1035d1b9c214464faab1feb1a3d1dda, type: 3}
+      objectReference: {fileID: 5733306399834351853, guid: a9f89ec40550e6a4ebe1d8d82539031a, type: 3}
     - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: _mapChunk.Array.data[4]
       value: 
-      objectReference: {fileID: 5049167548769144470, guid: 5e392d77698f76241860116139b064a2, type: 3}
+      objectReference: {fileID: 5733306399834351853, guid: a9f89ec40550e6a4ebe1d8d82539031a, type: 3}
     - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: _mapChunk.Array.data[5]
       value: 

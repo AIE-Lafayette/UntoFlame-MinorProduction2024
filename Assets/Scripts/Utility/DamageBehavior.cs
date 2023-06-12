@@ -30,6 +30,12 @@ public class DamageBehavior : MonoBehaviour
         private set { _isInvincible = value; }
     }
 
+    public void SetIsInvincible(bool isInvincible)
+    {
+        IsInvincible = isInvincible;
+        _elapsedTime = 0;
+    }
+
     public void AddDamageEventListener(DamageEvent listener)
     {
         damageEvent += listener;

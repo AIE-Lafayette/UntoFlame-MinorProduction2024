@@ -7,14 +7,16 @@ public class GameManager : MonoBehaviour
 {
 	[SerializeField, Tooltip("The player object.")]
 	private GameObject _player;
-	
+
+	[SerializeField, Tooltip("The score.")]
 	private Integer_SO _score;
 
+	[SerializeField, Tooltip("The high score.")]
 	private Integer_SO _highScore;
 	
 	private int _mapComplexityModifier = 0;
 
-	private float _gameSpeedMultiplier;
+	private float _gameSpeedMultiplier = 1;
 
 	public GameObject Player
 	{

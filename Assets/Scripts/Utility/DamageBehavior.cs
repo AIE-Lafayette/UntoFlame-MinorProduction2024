@@ -54,7 +54,7 @@ public class DamageBehavior : MonoBehaviour
         _rigidbody.velocity = Vector3.zero;
 		_rigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
 
-        EffectsManager.Instance.ScreenShake.ShakeSustain(0.2f, 5, 5, 1, 1);
+        EffectsManager.Instance.ScreenShake.ShakeSustain(0.1f, 1, 1, 1, 1);
 
         IsInvincible = true;
 

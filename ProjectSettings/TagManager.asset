@@ -10,6 +10,7 @@ TagManager:
   - Weapon
   - PlayerHit
   - Bullet
+  - NoHit
   layers:
   - Default
   - TransparentFX

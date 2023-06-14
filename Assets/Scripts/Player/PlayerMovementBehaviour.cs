@@ -33,8 +33,18 @@ public class PlayerMovementBehaviour : MonoBehaviour
         set { _hasDoubleJump = value; }
     }
 
+    public Vector3 MoveDirection
+    {
+        get { return _moveDirection; }
+    }
+
     [SerializeField]
     private GroundColliderBehaviour _groundCollider;
+
+    public bool IsGrounded
+    {
+        get { return _groundCollider.IsGrounded;}
+    }
 
     // Start is called before the first frame update
 

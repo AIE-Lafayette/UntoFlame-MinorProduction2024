@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimedSpawnerBehaviour : ChunkSpawnerBehaviour
+public class TimedSpawnerBehaviour : SpawnerBehaviour
 {
     [SerializeField]
     private float _timeToSpawn;
@@ -19,7 +19,7 @@ public class TimedSpawnerBehaviour : ChunkSpawnerBehaviour
 
         else
         {
-            SpawnChunk();
+            SpawnItem();
             _currentTimeToSpawn = _timeToSpawn;
         }
     }

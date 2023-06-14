@@ -713,9 +713,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25009cd4deb503e478d8c07ce7c5f42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1118219218}
-  Score: {fileID: 11400000, guid: b1bc27ab97bb34847ac083701703d071, type: 2}
-  HighScore: {fileID: 11400000, guid: 7a70e02f4b130dc41b586934c279bb95, type: 2}
+  _player: {fileID: 1118219218}
+  _score: {fileID: 11400000, guid: b1bc27ab97bb34847ac083701703d071, type: 2}
+  _highScore: {fileID: 11400000, guid: 7a70e02f4b130dc41b586934c279bb95, type: 2}
 --- !u!4 &340771596
 Transform:
   m_ObjectHideFlags: 0
@@ -1601,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09007f8bbb6389d48866603f7f0186ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mapChunk:
+  _items:
   - {fileID: 6504231741979063656, guid: 1bcaf7cbd9831a64888226f80e8b2d12, type: 3}
   - {fileID: 7774974084511165640, guid: 934de87f2a04d2d40ae9039265dfa657, type: 3}
   - {fileID: 7358049573071252276, guid: 7cce16d0f288e80479858f5c3f07b7e0, type: 3}
@@ -2004,8 +2004,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba028d9f1057eb429db103ab4f5e914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mapChunk:
-  - {fileID: 1300622734804294516, guid: 866b436123c121344ab9fb3ae9d0c77d, type: 3}
+  _items: []
+  _screenBoundary: {fileID: 0}
+  _chunkObjects: []
 --- !u!1 &1127278953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,9 +2051,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09007f8bbb6389d48866603f7f0186ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mapChunk:
+  _items:
   - {fileID: 1771693343206056024, guid: d8f8d2ec93f2c0c43a3177ca80c08a41, type: 3}
   - {fileID: 7744638247887645451, guid: dcc9072ae6c95974f917d55bf1d32ae5, type: 3}
+  - {fileID: 7619254166578645569, guid: 4bb5cab2bf3d69544a7fade50110591e, type: 3}
   _timeToSpawn: 6
 --- !u!1001 &1403926772
 PrefabInstance:
@@ -3277,6 +3279,14 @@ PrefabInstance:
       propertyPath: _mapChunk.Array.data[5]
       value: 
       objectReference: {fileID: 5733306399834351853, guid: a9f89ec40550e6a4ebe1d8d82539031a, type: 3}
+    - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
+      propertyPath: _chunkObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
+      propertyPath: _chunkObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c81150b615a81745a468e48f0803be9, type: 2}
     - target: {fileID: 8872748607738124551, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: m_Name
       value: Main Camera

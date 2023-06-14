@@ -10,11 +10,24 @@ public class CameraControllingBehaviour : MonoBehaviour
 
     public static ScreenShakeBehavior ScreenShake;
 
+    private Vector3 _initialPosition;
+
     private bool _shouldCameraMove = true;
+
 
     private void Awake()
     {
         ScreenShake = GetComponent<ScreenShakeBehavior>();
+    }
+
+    private void Start()
+    {
+        _initialPosition = transform.position;
+
+        GameManager.Instance.Player.GetComponent<DamageBehavior>().AddDeathEventListener(_ =>
+        {
+            _shouldCameraMove = false;
+        });
     }
 
     // Update is called once per frame
@@ -31,9 +44,5 @@ public class CameraControllingBehaviour : MonoBehaviour
 
         GameManager.Instance.Score.Value = System.Convert.ToInt32(transform.localPosition.x - _initialPosition.x);
 
-        GameManager.Instance.Player.GetComponent<DamageBehavior>().AddDeathEventListener(_ =>
-        {
-            _shouldCameraMove = false;
-        });
     }
 }

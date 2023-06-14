@@ -8,17 +8,25 @@ public class PlayerSweepBehaviour : MonoBehaviour
 {
     private GameObject _sweepArea = default;
     
-    public bool IsSweeping = false;
+    private bool _isSweeping = false;
 
     private float _timeToSweep = 0.25f;
     private float _timer = 0f;
 
-    //private PlayerMovementBehaviour _moveBehaviour;
+    private PlayerMovementBehaviour _moveBehaviour;
 
-    //private float _invincibilityTime;
-    //private float _elapsedTime = 0;
+    private float _invincibilityTime;
     
-    
+    public bool IsSweeping
+    {
+        get { return _isSweeping; }
+        private set { _isSweeping = value; }
+    }
+
+    public void SetIsSweeping(bool isSweeping)
+    {
+        _isSweeping = isSweeping;
+    }
 
     DamageBehavior _damageBehavior;
 
@@ -26,7 +34,7 @@ public class PlayerSweepBehaviour : MonoBehaviour
     {
         _sweepArea = transform.GetChild(0).gameObject;
 
-        //_damageBehavior = GetComponent<DamageBehavior>();
+        _damageBehavior = GetComponent<DamageBehavior>();
     }
 
     private void Update()
@@ -36,36 +44,23 @@ public class PlayerSweepBehaviour : MonoBehaviour
             Sweep();
         }
 
-        if(IsSweeping)
-        {
+        if(_isSweeping)
+        {   
+            _damageBehavior.SetIsInvincible(true);
             _timer += Time.deltaTime;
 
             if(_timer >= _timeToSweep)
             {
                 _timer = 0f;
-                IsSweeping = false;
-                _sweepArea.SetActive(IsSweeping);
+                _isSweeping = false;
+                _sweepArea.SetActive(_isSweeping);
             }
         }
-
-        //if(IsSweeping == true)
-        //{
-        //    _damageBehavior.SetIsInvincible(true);
-
-        //    _elapsedTime += Time.deltaTime;
-
-        //}
-        //if(_elapsedTime >= _invincibilityTime)
-        //{
-        //    _damageBehavior.SetIsInvincible(false);
-
-        //    IsSweeping = false;
-        //}
     }
 
     private void Sweep()
     {
-        IsSweeping = true;
-        _sweepArea.SetActive(IsSweeping);
+        _isSweeping = true;
+        _sweepArea.SetActive(_isSweeping);
     }
 }

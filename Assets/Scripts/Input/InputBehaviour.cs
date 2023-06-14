@@ -54,7 +54,7 @@ public class InputBehaviour : MonoBehaviour
 
     private void Sweep(InputAction.CallbackContext context)
     {
-        _sweep.IsSweeping = true;
+        _sweep.SetIsSweeping(true);
 
         gameObject.SetActive(true);
     }

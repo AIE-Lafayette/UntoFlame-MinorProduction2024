@@ -4,35 +4,22 @@ using UnityEngine;
 
 public class EnemyCollisionBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private bool _deathWall;
+	[SerializeField, Tooltip("The amount of force to apply to the player when they are hit.")]
+	private float _knockbackForce;
 
-    /// <summary>
-    /// Checks to see if the enemy has collided with a death wall
-    /// </summary>
-    /// <param name="collision"></param>
-    private void OnCollisionEnter(Collision collision)
-    {
-        //If not...
-        if (!collision.gameObject.CompareTag("Death Wall"))
-            //return
-            return;
+	[SerializeField, Tooltip("The angle (in degrees) at which the player should be knocked back.")]
+	private float _knockbackAngle;
 
-        //If true...
-        if (collision.gameObject.CompareTag("Death Wall"))
-            //...set deathwall to true
-            _deathWall = true;
+	private void OnTriggerEnter(Collider other)
+	{
+		// Make sure the colliding object has a DamageBehavior and that it isn't invincible.
+		DamageBehavior damageBehavior = other.GetComponent<DamageBehavior>();
+		if (!damageBehavior || damageBehavior.IsInvincible) return;
 
-        //If deathwall is true
-        if (_deathWall == true)
-        {
-            //...set enemy to not active
-            Destroy(gameObject);
-        }
+		float angleRadians = _knockbackAngle * Mathf.Deg2Rad;
 
-        if(collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(collision.gameObject);
-        }
-    }
+		Vector3 knockbackDirection = new Vector3(-Mathf.Cos(angleRadians), Mathf.Sin(angleRadians), 0);
+
+		damageBehavior.ApplyDamage(knockbackDirection, _knockbackForce);
+	}
 }

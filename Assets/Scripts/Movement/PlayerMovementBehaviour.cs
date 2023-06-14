@@ -6,7 +6,7 @@ public class PlayerMovementBehaviour : MonoBehaviour
 {
 
     private Rigidbody _rb;
-    private Vector2 _moveDirection;
+    private Vector3 _moveDirection;
     private Vector3 _jumpVelocity;
 
     [Header("Player Speeds")]
@@ -23,7 +23,14 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private float _jumpPower;
     [Tooltip("How many times the player can jump before hitting the ground.")]
     [SerializeField]
-    public float _numberOfJumps = 2;
+    private bool _hasDoubleJump;
+
+
+    public bool HasDoubleJump
+    {
+        get { return _hasDoubleJump; }
+        set { _hasDoubleJump = value; }
+    }
 
     [SerializeField]
     private GroundColliderBehaviour _groundCollider;
@@ -51,37 +58,39 @@ public class PlayerMovementBehaviour : MonoBehaviour
     public void Jump()
     {
         //Checks to see if the player is on the ground or has an extra jump
-        if (_groundCollider.IsGrounded || _numberOfJumps > 0)
+        if (_groundCollider.IsGrounded || _hasDoubleJump == true  )
         {
             //Force to adjust player by
             _jumpVelocity = new Vector3(0, 1, 0) * _jumpPower;
 
             //Adjusts the player position
             _rb.velocity = _jumpVelocity;
-        
-            //Decrement jumpcount for the player
-            _numberOfJumps--;
+
+            //Removes the doublejump from the player
+            _hasDoubleJump = false;
         }
+    }
+
+    public void Sweep()
+    {
+
     }
 
     // Update is called once per frame
 
     private void FixedUpdate()
-    {
-        //Allows for the player's speed to be modified in unity
-        float groundSpeed = _groundSpeed;
-        float airSpeed = _airSpeed;
-
+    {     
+        
         //Controls the speed the player moves on ground
         if (_groundCollider.IsGrounded)
-        { 
-            _rb.AddForce(_moveDirection * groundSpeed * Time.deltaTime, ForceMode.VelocityChange);
+        {
+            transform.position += _moveDirection * _groundSpeed * Time.deltaTime;
         }
 
         //Controls the speed the player moves in air
         if (!_groundCollider.IsGrounded)
-        { 
-            _rb.AddForce(_moveDirection * airSpeed * Time.deltaTime, ForceMode.VelocityChange);
+        {
+            transform.position += _moveDirection * _airSpeed * Time.deltaTime;
         }
                 
     }

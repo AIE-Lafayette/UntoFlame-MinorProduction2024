@@ -1,4 +1,4 @@
-﻿{
+{
     "files.exclude":
     {
         "**/.DS_Store":true,
@@ -52,4 +52,5 @@
         "temp/":true,
         "Temp/":true
     }
+    
 }

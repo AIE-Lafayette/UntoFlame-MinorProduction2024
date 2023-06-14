@@ -5,40 +5,39 @@ using Utility.ObjectPool;
 
 public delegate void ChunkEvent(GameObject chunk);
 
-public class ChunkSpawnerBehaviour : MonoBehaviour
+public class ChunkSpawnerBehaviour : SpawnerBehaviour
 {
-    private ChunkEvent _chunkDespawn;
-    private ChunkEvent _chunkSpawn;
-
-    public void AddChunkDespawnListener(ChunkEvent listener) => _chunkDespawn += listener;
-    public void AddChunkSpawnListener(ChunkEvent listener) => _chunkSpawn += listener;
-
-
-    [SerializeField, Tooltip("The map chunks that will be spawned in.")]
-    private GameObject[] _mapChunk;
-
-    [SerializeField]
+    private int _currentComplexityIndex = 0;
+    [SerializeField, Tooltip("The screen boundary in scene that this script will look at in order to determine when to spawn a new mapChunk.")]
     private ScreenBoundaryBehaviour _screenBoundary;
+    
+    [SerializeField]
+    private ChunkHolder_SO[] _chunkObjects;
 
-    // Start is called before the first frame update
     void Start()
     {
-        SpawnChunk();
+        SpawnItem();
     }
 
-    // Update is called once per frame
-    void Update()
+    private int GetNext()
     {
-        if (ScreenBoundaryBehaviour._canSpawn)
-            SpawnChunk();
+        _currentComplexityIndex += 1;
+        if (_currentComplexityIndex > GameManager.Instance.MapComplexityModifier)
+        {
+            _currentComplexityIndex = GameManager.Instance.MapComplexityModifier;
+        }
+
+        return _currentComplexityIndex;
     }
 
-    void SpawnChunk()
+    public override void SpawnItem()
     {
-        int randomNumber = Random.Range(0, _mapChunk.Length - 1);
+        GameObject[] chunks = _chunkObjects[GetNext()].Chunks;
+        int randomNumber = Random.Range(0, chunks.Length);
 
-        GameObject chunk = ObjectPoolBehavior.Instance.GetObject(_mapChunk[randomNumber], transform.position, Quaternion.identity);
-
-        ScreenBoundaryBehaviour._canSpawn = false;
+        Vector3 spawnPosition = new Vector3(Mathf.Floor(transform.position.x), transform.position.y, transform.position.z);
+       
+        Instantiate(chunks[randomNumber], spawnPosition, Quaternion.identity);
     }
+
 }

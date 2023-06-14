@@ -1,24 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utility.ObjectPool;
 
 public class ScreenBoundaryBehaviour : MonoBehaviour
 {
-    public static bool _canSpawn;
+    [SerializeField]
+    private ChunkSpawnerBehaviour _chunkSpawner;
 
     private void OnTriggerExit(Collider other)
     {
-        _canSpawn = true;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-           
+        Destroy(other.transform.parent.gameObject);
+        _chunkSpawner.SpawnItem();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

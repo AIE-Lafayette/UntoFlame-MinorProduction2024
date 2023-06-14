@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9170000902116613828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.19, z: 0}
+  m_LocalPosition: {x: 0, y: -3.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9221896080484004667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.263, z: 0}
+  m_LocalPosition: {x: 0, y: 2.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121,6 +121,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5889555393299201531, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
+      propertyPath: _knockbackAngle
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889555393299201531, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
+      propertyPath: _knockbackForce
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7591957386569701105, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -161,9 +169,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c605413b93f2e804a896b7d607263de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
-  _patrolPoints: []
-  _waitTime: 0
+  _speed: 5
+  _patrolPoints:
+  - {fileID: 6659634629715976094}
+  - {fileID: 6518612149208782665}
+  _waitTime: 0.2
 --- !u!1001 &5024773244852679032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173,7 +183,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -219,5 +229,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPatrol_SkeletalMesh
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bf54843fd94a0c04e811da0ecbf3dee8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4c9a3b9d917b774682e0790c14f4b70, type: 3}

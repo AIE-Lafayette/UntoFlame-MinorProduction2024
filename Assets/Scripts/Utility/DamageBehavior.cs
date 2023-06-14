@@ -10,6 +10,9 @@ public class DamageBehavior : MonoBehaviour
 {
     public delegate void DamageEvent(DamageBehavior damageBehavior);
 
+    [SerializeField]
+    private GameObject _hitParticle;
+
     private bool _isInvincible = false;
     private Rigidbody _rigidbody;
 
@@ -60,7 +63,11 @@ public class DamageBehavior : MonoBehaviour
         _rigidbody.velocity = Vector3.zero;
 		_rigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
 
+        EffectsManager.Instance.ScreenShake.ShakeSustain(0.1f, 1, 1, 1, 1);
+
         IsInvincible = true;
+
+        ObjectPoolBehavior.Instance.GetObject(_hitParticle, transform.position, Quaternion.identity);
 
         if (damageEvent != null)
             damageEvent.Invoke(this);

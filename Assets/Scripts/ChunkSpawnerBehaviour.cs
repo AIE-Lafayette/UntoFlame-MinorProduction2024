@@ -5,7 +5,7 @@ using Utility.ObjectPool;
 
 public delegate void ChunkEvent(GameObject chunk);
 
-public class ChunkSpawnerBehaviour : SpawnerBehavior
+public class ChunkSpawnerBehaviour : SpawnerBehaviour
 {
     private int _currentComplexityIndex = 0;
     [SerializeField, Tooltip("The screen boundary in scene that this script will look at in order to determine when to spawn a new mapChunk.")]

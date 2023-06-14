@@ -9,7 +9,6 @@ public class InputBehaviour : MonoBehaviour
 
     private PlayerActions _playerActions;
 
-
     private void Awake()
     {
         _playerActions = new PlayerActions();

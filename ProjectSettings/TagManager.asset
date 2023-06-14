@@ -11,6 +11,7 @@ TagManager:
   - PlayerHit
   - Bullet
   - NoHit
+  - Interactable
   layers:
   - Default
   - TransparentFX

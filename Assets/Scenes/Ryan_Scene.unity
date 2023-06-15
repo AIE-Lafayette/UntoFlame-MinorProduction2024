@@ -1598,6 +1598,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3999615012407113488, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: _hitParticle
+      value: 
+      objectReference: {fileID: 6134333401442708225, guid: f0e33f27a5c2877459473e2e8bbbe296, type: 3}
+    - target: {fileID: 3999615012407113488, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: _invincibilityTime
       value: 5
       objectReference: {fileID: 0}
@@ -2291,9 +2295,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1712413826, guid: 297454cfcc956af45b08ee69ceb14c07, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1282626070892807841, guid: 297454cfcc956af45b08ee69ceb14c07, type: 3}
       propertyPath: m_Name
       value: EnviornmentLighting
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282626070892807841, guid: 297454cfcc956af45b08ee69ceb14c07, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6358198614770079478, guid: 297454cfcc956af45b08ee69ceb14c07, type: 3}
       propertyPath: m_RootOrder
@@ -3853,6 +3865,10 @@ PrefabInstance:
     - target: {fileID: 8872748607738124554, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872748607738124555, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8872748607738124556, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: speed

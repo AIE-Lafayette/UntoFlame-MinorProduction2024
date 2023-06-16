@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be75578470ec332459696d750fcc705c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _range: -1
+  _range: 20
   _fireRate: 0.8
 --- !u!114 &3447526491475496625
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectile: {fileID: 0}
-  _projectileSpeed: 25
+  _projectileSpeed: 10
   _projectileSpawnRate: 1
   _shouldAutoFire: 0
 --- !u!4 &4617159970535546961 stripped

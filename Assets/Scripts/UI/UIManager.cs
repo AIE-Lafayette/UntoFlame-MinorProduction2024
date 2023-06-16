@@ -58,7 +58,7 @@ public class UIManager : MonoBehaviour
 	public void ReturnToStart()
 	{		
 		Resume();
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(1);
 	}
 
 	/// <summary>

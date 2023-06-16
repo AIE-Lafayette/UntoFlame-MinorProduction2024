@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
-
+    
     private Rigidbody _rb;
     private Vector3 _moveDirection;
     private Vector3 _jumpVelocity;
+
 
     [Header("Player Speeds")]
     [Tooltip("Controls the speed of the player while on the ground.")]
@@ -32,8 +33,18 @@ public class PlayerMovementBehaviour : MonoBehaviour
         set { _hasDoubleJump = value; }
     }
 
+    public Vector3 MoveDirection
+    {
+        get { return _moveDirection; }
+    }
+
     [SerializeField]
     private GroundColliderBehaviour _groundCollider;
+
+    public bool IsGrounded
+    {
+        get { return _groundCollider.IsGrounded;}
+    }
 
     // Start is called before the first frame update
 
@@ -69,11 +80,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
             //Removes the doublejump from the player
             _hasDoubleJump = false;
         }
-    }
-
-    public void Sweep()
-    {
-
     }
 
     // Update is called once per frame

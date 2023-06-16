@@ -7,9 +7,7 @@ public class DespawnBehaviour : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Despawn collision detected.");
-        if(collision.gameObject.CompareTag("Platform"))
-        {
-            Destroy(collision.gameObject);
-        }
+        Destroy(collision.gameObject);
+        
     }
 }

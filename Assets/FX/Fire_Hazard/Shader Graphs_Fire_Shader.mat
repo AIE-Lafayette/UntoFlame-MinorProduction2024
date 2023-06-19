@@ -44,7 +44,7 @@ Material:
     - _dissolvescale: 4.9
     - _dissolvespeed: -4.75
     m_Colors:
-    - _Color: {r: 47.937256, g: 4.266667, b: 0, a: 0}
+    - _Color: {r: 145.31857, g: 12.934114, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8620114755308989998
 MonoBehaviour:

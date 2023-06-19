@@ -528,9 +528,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2925374591195890538, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5033390587907701301, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889555393299201531, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
+      propertyPath: _knockbackAngle
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889555393299201531, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
+      propertyPath: _knockbackForce
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7591957386569701105, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
       propertyPath: m_Enabled

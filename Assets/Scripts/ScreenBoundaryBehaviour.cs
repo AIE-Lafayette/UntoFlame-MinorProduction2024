@@ -10,7 +10,7 @@ public class ScreenBoundaryBehaviour : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Destroy(other.transform.parent.gameObject);
+        Destroy(other.transform.root.gameObject);
         _chunkSpawner.SpawnItem();
     }
 

@@ -7,8 +7,6 @@ public class InteractableBehaviour : MonoBehaviour
 
     [SerializeField]
     private float _speed;
-
-    private bool _canCollide = true;
  
     private Vector3 _startRotation;
     private Vector3 _finalRotation;
@@ -19,7 +17,6 @@ public class InteractableBehaviour : MonoBehaviour
 
     public void Interact()
     {
-        _canCollide = false;
         _shouldMove = true;
     }
 
@@ -39,15 +36,5 @@ public class InteractableBehaviour : MonoBehaviour
 
         if (transform.localRotation == Quaternion.Euler(_finalRotation))
             _shouldMove = false;
-    }
-
-    void OnCollisionEnter(Collision other)
-    {
-        if (!_canCollide) return;
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Interact();
-        }
     }
 }

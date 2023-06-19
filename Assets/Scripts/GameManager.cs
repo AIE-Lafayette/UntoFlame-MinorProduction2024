@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
 	/// 
 	public void StartGame()
 	{
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(2);
 		// Reset the score
 		Score.Value = 0;
 
@@ -93,6 +93,16 @@ public class GameManager : MonoBehaviour
 	}
 
 	private float timePassed;
+
+	void Start()
+	{
+		if (SceneManager.GetActiveScene().buildIndex == 0)
+		{
+			HighScore.Value = 0;
+			SceneManager.LoadScene(1);
+		}
+
+	}
 	
 	private void Update() 
 	{
@@ -103,8 +113,7 @@ public class GameManager : MonoBehaviour
 			if (_gameSpeedMultiplier < 5)
 				_gameSpeedMultiplier += 0.01f;
 		}
-
-		if (Score.Value > HighScore.Value)
+		if ((Score != null && HighScore != null) && Score.Value > HighScore.Value)
 			HighScore.Value = Score.Value;
 
 		UpdateComplexityModifier();

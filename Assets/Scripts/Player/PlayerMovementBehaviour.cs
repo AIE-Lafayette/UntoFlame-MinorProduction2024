@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
-    
+    DamageBehavior _damageBehavior;
+
     private Rigidbody _rb;
     private Vector3 _moveDirection;
     private Vector3 _jumpVelocity;
@@ -26,6 +27,15 @@ public class PlayerMovementBehaviour : MonoBehaviour
     [SerializeField]
     private bool _hasDoubleJump;
 
+    [Header("Misc.")]
+    [Tooltip("Determines if the player is alive")]
+    [SerializeField]
+    private bool _isAlive;
+
+    [Tooltip("Determines if the player has been hit")]
+    [SerializeField]
+    private bool _isHit;
+
 
     public bool HasDoubleJump
     {
@@ -44,6 +54,16 @@ public class PlayerMovementBehaviour : MonoBehaviour
     public bool IsGrounded
     {
         get { return _groundCollider.IsGrounded;}
+    }
+
+    public bool IsAlive
+    {
+        get { return _isAlive; }
+    }
+
+    public bool IsHit
+    {
+        get { return _isHit; }
     }
 
     // Start is called before the first frame update
@@ -98,6 +118,21 @@ public class PlayerMovementBehaviour : MonoBehaviour
         {
             transform.position += _moveDirection * _airSpeed * Time.deltaTime;
         }
-                
+        
+        if(CompareTag("Enemy"))
+        {
+            _isHit = true;
+        }
+
+        if(_isHit)
+        {
+            _damageBehavior.ApplyDamage(Vector3.left);
+            _isAlive = false;
+        }
+
+        if (!_isAlive)
+        {
+           _damageBehavior.Kill();
+        }
     }
 }

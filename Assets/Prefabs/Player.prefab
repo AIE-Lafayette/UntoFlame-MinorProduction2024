@@ -345,6 +345,7 @@ MonoBehaviour:
   _airSpeed: 3
   _jumpPower: 3
   _hasDoubleJump: 0
+  _isAlive: 1
   _groundCollider: {fileID: 9113797690667707443}
 --- !u!54 &9113797690742787785
 Rigidbody:
@@ -388,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39fc644a41a94694b9d5b580d2d8465b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitParticle: {fileID: 6134333401442708225, guid: f0e33f27a5c2877459473e2e8bbbe296, type: 3}
   _invincibilityTime: 5
 --- !u!114 &7012217713500204286
 MonoBehaviour:

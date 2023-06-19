@@ -6,6 +6,6 @@ public class SweepArea : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        
+        gameObject.SetActive(false);
     }
 }

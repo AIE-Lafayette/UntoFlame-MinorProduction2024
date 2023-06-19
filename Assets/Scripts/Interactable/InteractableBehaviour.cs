@@ -17,7 +17,6 @@ public class InteractableBehaviour : MonoBehaviour
 
     public void Interact()
     {
-        _canCollide = false;
         _shouldMove = true;
     }
 

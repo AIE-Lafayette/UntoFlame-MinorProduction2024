@@ -17,7 +17,10 @@ public class UIManager : MonoBehaviour
 	private GameObject _gameOverScreen;
 	[SerializeField, Tooltip("The game object that is displayed when the player pauses the game.")]
 	private GameObject _pauseScreen;
-
+	[SerializeField, Tooltip("The button that is selected when the player pauses the game.")]
+	private GameObject _pauseMenuReturn;
+	[SerializeField, Tooltip("The button that is selected when the player dies.")]
+	private GameObject _gameOverRestart;
 	private static UIManager _instance;
 	public static UIManager Instance
 	{
@@ -103,6 +106,7 @@ public class UIManager : MonoBehaviour
 		{
 			Time.timeScale = 0;
 			InputSystem.settings.updateMode = InputSettings.UpdateMode.ProcessEventsInDynamicUpdate;
+			EventSystem.current.SetSelectedGameObject(_pauseMenuReturn);
 		}
 		else
 		{
@@ -116,9 +120,12 @@ public class UIManager : MonoBehaviour
 		if (_gameOverScreen)
 			GameManager.Instance.Player.GetComponent<DamageBehavior>().AddDeathEventListener(_=>{
 				_gameOverScreen.SetActive(true);
-
+				EventSystem.current.SetSelectedGameObject(_gameOverRestart);
 				UpdateHighScoreText();
 			}); 
+
+
+				
 	}
 
 	private void Start()

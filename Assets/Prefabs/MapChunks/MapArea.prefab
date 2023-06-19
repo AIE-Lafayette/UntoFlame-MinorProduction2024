@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8206653164720409967}
   m_Layer: 3
   m_Name: GroundBoundary
-  m_TagString: Untagged
+  m_TagString: NoHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

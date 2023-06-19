@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class InputBehaviour : MonoBehaviour
 {
-    private PlayerMovementBehaviour _moveBehaviour;
+    private PlayerMovementBehaviour _moveBehaviour; 
+    private PlayerSweepBehaviour _sweep;
 
     private PlayerActions _playerActions;
 
@@ -14,8 +15,15 @@ public class InputBehaviour : MonoBehaviour
         _playerActions = new PlayerActions();
         _playerActions.Character.Movement.performed += Move;
         _playerActions.Character.Jump.performed += Jump;
-
+        _playerActions.Character.Sweep.performed += Sweep;
         _playerActions.Character.Pause.performed += Pause;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        _sweep = GetComponent<PlayerSweepBehaviour>();
+        _moveBehaviour = GetComponent<PlayerMovementBehaviour>();
     }
 
     private void OnEnable()
@@ -40,16 +48,17 @@ public class InputBehaviour : MonoBehaviour
     }
 
     private void Jump(InputAction.CallbackContext context)
-    {
-        float jump = context.ReadValue<float>();
+    {        
         _moveBehaviour.Jump();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Sweep(InputAction.CallbackContext context)
     {
-        _moveBehaviour = GetComponent<PlayerMovementBehaviour>();
+        _sweep.SetIsSweeping(true);
+
+        gameObject.SetActive(true);
     }
+
 
   
 }

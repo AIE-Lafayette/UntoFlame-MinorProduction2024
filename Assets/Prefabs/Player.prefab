@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 7523900555160577316}
   - component: {fileID: 3274314314835188057}
   - component: {fileID: 5257929977400114059}
+  - component: {fileID: 7053791933389257837}
   m_Layer: 0
-  m_Name: PlayerCapeSweep
+  m_Name: SweepArea
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -27,12 +28,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855762560276524943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.029, y: -0.035000086, z: 0}
+  m_LocalPosition: {x: 0.625, y: -0.035000086, z: 0}
   m_LocalScale: {x: 1, y: 0.078593, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9113797690742787784}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7523900555160577316
 MeshFilter:
@@ -92,11 +93,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855762560276524943}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7053791933389257837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855762560276524943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4631263d77073524794432b1aebae633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9113797690667707441
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +143,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9113797690742787784}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9113797690667707446
 MeshFilter:
@@ -226,6 +239,8 @@ GameObject:
   - component: {fileID: 9113797690742787786}
   - component: {fileID: 3999615012407113488}
   - component: {fileID: 7012217713500204286}
+  - component: {fileID: 2665927303769731906}
+  - component: {fileID: 7615039606060992245}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -245,9 +260,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2558234131532429832}
   - {fileID: 9113797690883842719}
   - {fileID: 9113797690667707442}
-  - {fileID: 2558234131532429832}
   - {fileID: 3946838865889825139}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -373,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39fc644a41a94694b9d5b580d2d8465b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _invincibilityTime: 0
+  _invincibilityTime: 5
 --- !u!114 &7012217713500204286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +439,38 @@ MonoBehaviour:
   m_DefaultActionMap: Character
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2665927303769731906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113797690742787795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ecf6bf743646bf4885d700ca31feaf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &7615039606060992245
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113797690742787795}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: cbd8fdba456816242808b52d518ea557, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3e3cb6efcbb12564a8ea1756291a531e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9113797690883842718
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +502,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9113797690742787784}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &9113797690883842705
 CapsuleCollider:

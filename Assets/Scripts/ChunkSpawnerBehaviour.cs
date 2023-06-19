@@ -5,57 +5,39 @@ using Utility.ObjectPool;
 
 public delegate void ChunkEvent(GameObject chunk);
 
-public class ChunkSpawnerBehaviour : MonoBehaviour
+public class ChunkSpawnerBehaviour : SpawnerBehaviour
 {
-    private ChunkEvent _chunkDespawn;
-    private ChunkEvent _chunkSpawn;
-
-    private static ChunkSpawnerBehaviour _instance;
-
-    public void AddChunkDespawnListener(ChunkEvent listener) => _chunkDespawn += listener;
-    public void AddChunkSpawnListener(ChunkEvent listener) => _chunkSpawn += listener;
-
-
-    [SerializeField, Tooltip("The map chunks that will be spawned in.")]
-    private GameObject[] _mapChunk;
-
+    private int _currentComplexityIndex = 0;
     [SerializeField, Tooltip("The screen boundary in scene that this script will look at in order to determine when to spawn a new mapChunk.")]
     private ScreenBoundaryBehaviour _screenBoundary;
+    
+    [SerializeField]
+    private ChunkHolder_SO[] _chunkObjects;
 
-    public static ChunkSpawnerBehaviour Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<ChunkSpawnerBehaviour>();
-            }
-
-            if (_instance == null)
-            {
-                Debug.Log("No chunk spawner found in scene. Making chunk spawner.");
-                GameObject chunkSpawner = new GameObject("ChunkSpawner");
-                _instance = chunkSpawner.AddComponent<ChunkSpawnerBehaviour>();
-            }
-
-            return _instance;
-        }
-    }
-
-    // Start is called before the first frame update
     void Start()
     {
-        SpawnChunk();
+        SpawnItem();
     }
 
-    public void SpawnChunk()
+    private int GetNext()
     {
-        int randomNumber = Random.Range(0, _mapChunk.Length);
+        _currentComplexityIndex += 1;
+        if (_currentComplexityIndex > GameManager.Instance.MapComplexityModifier)
+        {
+            _currentComplexityIndex = GameManager.Instance.MapComplexityModifier;
+        }
+
+        return _currentComplexityIndex;
+    }
+
+    public override void SpawnItem()
+    {
+        GameObject[] chunks = _chunkObjects[GetNext()].Chunks;
+        int randomNumber = Random.Range(0, chunks.Length);
 
         Vector3 spawnPosition = new Vector3(Mathf.Floor(transform.position.x), transform.position.y, transform.position.z);
-
-        Instantiate(_mapChunk[randomNumber], spawnPosition, Quaternion.identity);
-
-
+       
+        Instantiate(chunks[randomNumber], spawnPosition, Quaternion.identity);
     }
+
 }

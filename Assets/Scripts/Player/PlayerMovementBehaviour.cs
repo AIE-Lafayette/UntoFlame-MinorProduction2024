@@ -66,6 +66,11 @@ public class PlayerMovementBehaviour : MonoBehaviour
         get { return _isHit; }
     }
 
+    public float JumpVelocity
+    {
+        get { return _jumpVelocity.y; }
+    }
+
     // Start is called before the first frame update
 
     void Start()

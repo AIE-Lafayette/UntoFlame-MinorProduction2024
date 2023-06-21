@@ -461,6 +461,7 @@ MonoBehaviour:
   _airSpeed: 6
   _jumpPower: 10
   _hasDoubleJump: 0
+  _isAlive: 1
   _groundCollider: {fileID: 9113797690667707443}
 --- !u!54 &9113797690742787785
 Rigidbody:

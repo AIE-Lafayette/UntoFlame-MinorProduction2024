@@ -89,7 +89,6 @@ public class DamageBehavior : MonoBehaviour
         if (deathEvent != null)
             deathEvent.Invoke(this);
         
-        gameObject.SetActive(false);
             
     }
 

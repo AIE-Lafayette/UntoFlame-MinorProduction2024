@@ -6,6 +6,15 @@ public class SweepArea : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        gameObject.SetActive(false);
+        CompareTag(other.tag);
+
+        if(tag == "Interactable")
+        {
+            InteractableBehaviour behaviour = other.GetComponent<InteractableBehaviour>();
+
+            if (!behaviour) return;
+
+            behaviour.Interact();
+        }
     }
 }

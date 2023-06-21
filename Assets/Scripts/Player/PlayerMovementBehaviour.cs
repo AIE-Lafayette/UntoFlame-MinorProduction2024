@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovementBehaviour : MonoBehaviour
 {
-    DamageBehavior _damageBehavior;
+    DamageBehavior _damageBehaviour;
 
     private Rigidbody _rb;
     private Vector3 _moveDirection;
@@ -71,12 +71,16 @@ public class PlayerMovementBehaviour : MonoBehaviour
         get { return _rb.velocity.y; }
     }
 
+
     // Start is called before the first frame update
 
     void Start()
     {
         //Assigns a rigidbody at the start of the program
         _rb = GetComponent<Rigidbody>();
+
+        _damageBehaviour = GetComponent<DamageBehavior>();
+
     }
 
     /// <summary>
@@ -131,12 +135,15 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
         if(_isHit)
         {
-            _damageBehavior.ApplyDamage(Vector3.left);
+            _damageBehaviour.ApplyDamage(Vector3.left);
+
+            _isHit = false;
+
         }
 
-        if (!_isAlive)
+        if (!IsAlive)
         {
-           _damageBehavior.Kill();
+           _damageBehaviour.Kill();
         }
     }
 }

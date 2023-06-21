@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43aa8083d6c9aa247a808981366108df, type: 3}
   m_Name: TestChunks
   m_EditorClassIdentifier: 
-  _chunks: []
+  _chunks:
+  - {fileID: 7079751477479672194, guid: 77023972bdf785d4a9745cad4e7c9481, type: 3}

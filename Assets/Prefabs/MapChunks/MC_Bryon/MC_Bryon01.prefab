@@ -7,13 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7752738142611664788}
     m_Modifications:
+    - target: {fileID: 2150952698246572809, guid: 57529189541247b449c0f8ae5ae087b7, type: 3}
+      propertyPath: _range
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3447526491475496625, guid: 57529189541247b449c0f8ae5ae087b7, type: 3}
       propertyPath: _projectile
       value: 
       objectReference: {fileID: 217636128420312135, guid: b1ddf7dd13bdb89429c4efb89fd5aba6, type: 3}
     - target: {fileID: 3447526491475496625, guid: 57529189541247b449c0f8ae5ae087b7, type: 3}
       propertyPath: _projectileSpeed
-      value: 25
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3769468121841427059, guid: 57529189541247b449c0f8ae5ae087b7, type: 3}
       propertyPath: m_Name

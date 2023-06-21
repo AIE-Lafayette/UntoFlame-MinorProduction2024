@@ -12,14 +12,16 @@ public class DamageBehavior : MonoBehaviour
 
     [SerializeField]
     private GameObject _hitParticle;
-
     private bool _isInvincible = false;
+    [SerializeField]
+    private bool _isKnockback = false;
     private Rigidbody _rigidbody;
 
     [SerializeField, Tooltip("The amount of time the object is invincible after taking damage.")]
     private float _invincibilityTime;
+    [SerializeField, Tooltip("The amount of time the object is knocked back after taking damage.")]
+    private float _knockbackTime;
     private float _elapsedTime = 0;
-
     private DamageEvent damageEvent;
     private DamageEvent deathEvent;
 
@@ -31,6 +33,11 @@ public class DamageBehavior : MonoBehaviour
     public bool IsInvincible {
         get { return _isInvincible; }
         private set { _isInvincible = value; }
+    }
+
+    public bool IsKnockback {
+        get { return _isKnockback; }
+        private set { _isKnockback = value; }
     }
 
     public void SetIsInvincible(bool isInvincible)
@@ -62,6 +69,7 @@ public class DamageBehavior : MonoBehaviour
 
         _rigidbody.velocity = Vector3.zero;
 		_rigidbody.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
+        IsKnockback = true;
 
         EffectsManager.Instance.ScreenShake.ShakeSustain(0.1f, 1, 1, 1, 1);
 
@@ -97,6 +105,16 @@ public class DamageBehavior : MonoBehaviour
             {
                 _elapsedTime = 0;
                 IsInvincible = false;
+            }
+        }
+
+        if (IsKnockback)
+        {
+            _elapsedTime += Time.deltaTime;
+            if (_elapsedTime >= _knockbackTime)
+            {
+                _elapsedTime = 0;
+                IsKnockback = false;
             }
         }
     }

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chunks:
   - {fileID: 7079751477479672194, guid: 77023972bdf785d4a9745cad4e7c9481, type: 3}
+  - {fileID: 7079751477479672194, guid: b57c5133adc246145a5115d499d153da, type: 3}
+  - {fileID: 7079751477479672194, guid: 77023972bdf785d4a9745cad4e7c9481, type: 3}

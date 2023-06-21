@@ -27,6 +27,11 @@ public class ChunkSpawnerBehaviour : SpawnerBehaviour
             _currentComplexityIndex = GameManager.Instance.MapComplexityModifier;
         }
 
+        if (_currentComplexityIndex > _chunkObjects.Length - 1)
+        {
+            _currentComplexityIndex = _chunkObjects.Length - 1;
+        }
+
         return _currentComplexityIndex;
     }
 

@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fed426054be0d6418f98cf804f1c1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lifetime: 2
+  _knockbackForce: 5
+  _knockbackAngle: 35
 --- !u!54 &5664407578560300285
 Rigidbody:
   m_ObjectHideFlags: 0

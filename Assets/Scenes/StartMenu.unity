@@ -461,9 +461,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25009cd4deb503e478d8c07ce7c5f42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  Score: {fileID: 11400000, guid: b1bc27ab97bb34847ac083701703d071, type: 2}
-  HighScore: {fileID: 11400000, guid: 7a70e02f4b130dc41b586934c279bb95, type: 2}
+  _player: {fileID: 0}
+  _score: {fileID: 11400000, guid: b1bc27ab97bb34847ac083701703d071, type: 2}
+  _highScore: {fileID: 11400000, guid: 7a70e02f4b130dc41b586934c279bb95, type: 2}
 --- !u!4 &391671648
 Transform:
   m_ObjectHideFlags: 0

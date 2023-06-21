@@ -3,7 +3,17 @@ guid: a45018d7fef354140996ffba9a04f4ab
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EnemyChasing_Eye_Mat
+    second: {fileID: 2100000, guid: 4f2ddc7708940874d85a24dfe2134c1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EnemyChasing_Hands_Mat
+    second: {fileID: 2100000, guid: 7bdcdd4213d89084983b029b6970ebba, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

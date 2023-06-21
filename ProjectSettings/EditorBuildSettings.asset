@@ -6,16 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Init_Scene.unity
+    guid: f67c5fd6fffb6e94f8103bee22f6fd01
+  - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: b404f314618774944aa5f8d5ae955279
-  - enabled: 1
-    path: Assets/Scenes/Bryon_Scene.unity
-    guid: 7a1453ffb9b5c6d4eb3ae44ca279933b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Ryan_Scene.unity
     guid: 622160aba3e6fbf42814d9cfbf207d51
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: ed0d71f8e85599a46909ae7810abe086
+  - enabled: 1
+    path: Assets/Scenes/Bryon_Scene.unity
+    guid: 3bda40dab1bb1814ea552c1671edcdb1
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d85014722bced3b47b4aefb6ad5a39ca, type: 2}

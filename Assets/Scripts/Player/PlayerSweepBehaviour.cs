@@ -6,7 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(DamageBehavior))]
 public class PlayerSweepBehaviour : MonoBehaviour
 {
-    private GameObject _sweepArea = default;
+    private GameObject _sweepArea;
+    [SerializeField]
+    private GameObject _sweepEffect;
     
     private bool _isSweeping = false;
 
@@ -48,12 +50,14 @@ public class PlayerSweepBehaviour : MonoBehaviour
         {   
             _damageBehavior.SetIsInvincible(true);
             _timer += Time.deltaTime;
+            _sweepArea.SetActive(true);
 
-            if(_timer >= _timeToSweep)
+
+            if (_timer >= _timeToSweep)
             {
                 _timer = 0f;
                 _isSweeping = false;
-                _sweepArea.SetActive(_isSweeping);
+                _sweepArea.SetActive(false);
             }
         }
     }
@@ -62,5 +66,7 @@ public class PlayerSweepBehaviour : MonoBehaviour
     {
         _isSweeping = true;
         _sweepArea.SetActive(_isSweeping);
+
+        Instantiate(_sweepEffect, transform.position, _sweepEffect.transform.rotation);
     }
 }

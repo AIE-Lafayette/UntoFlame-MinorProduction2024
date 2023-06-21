@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3318149088907614411}
   - component: {fileID: -5754084199372789682}
   - component: {fileID: -7511558181221131132}
+  - component: {fileID: 8229708540952271751}
   m_Layer: 0
   m_Name: ArtDecoBuildingB
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8229708540952271751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7774974084511165640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01108662, y: 0.017029507, z: 0.015040319}
+  m_Center: {x: 0.000057032565, y: 0.008514754, z: -0.00006403797}

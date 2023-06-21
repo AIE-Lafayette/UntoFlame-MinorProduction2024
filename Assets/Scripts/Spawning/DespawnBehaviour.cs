@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DespawnBehaviour : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Despawn collision detected.");
-        Destroy(collision.gameObject);
+        Debug.Log("Despawn trigger detected.");
+        Destroy(collider.gameObject);
         
     }
 }

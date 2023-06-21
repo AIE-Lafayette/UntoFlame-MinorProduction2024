@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6556490517368500424}
   - component: {fileID: 2857856685032087559}
   - component: {fileID: 21905340786332877}
+  - component: {fileID: 6614011051818802477}
   m_Layer: 0
   m_Name: IndustrialBuildingDPrefab'
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6614011051818802477
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7619254166578645569}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 32.4713, y: 39.315605, z: 25.010813}
+  m_Center: {x: 0.057312965, y: 0.09798908, z: 0}

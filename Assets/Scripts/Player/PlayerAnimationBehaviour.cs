@@ -25,7 +25,7 @@ public class PlayerAnimationBehaviour : MonoBehaviour
         _animator.SetBool("Sweep", _sweepBehaviour.IsSweeping);
         _animator.SetBool("InAir", !_movementBehaviour.IsGrounded);
         _animator.SetFloat("Speed", _movementBehaviour.MoveDirection.magnitude);
-        _animator.SetFloat("YDirection", _movementBehaviour.JumpVelocity);
+        _animator.SetFloat("YDirection", _movementBehaviour.JumpDirection);
         _animator.SetBool("PlayerAlive", _movementBehaviour.IsAlive);
     }
 }

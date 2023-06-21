@@ -66,9 +66,9 @@ public class PlayerMovementBehaviour : MonoBehaviour
         get { return _isHit; }
     }
 
-    public float JumpVelocity
+    public float JumpDirection
     {
-        get { return _jumpVelocity.y; }
+        get { return _rb.velocity.y; }
     }
 
     // Start is called before the first frame update
@@ -132,7 +132,6 @@ public class PlayerMovementBehaviour : MonoBehaviour
         if(_isHit)
         {
             _damageBehavior.ApplyDamage(Vector3.left);
-            _isAlive = false;
         }
 
         if (!_isAlive)

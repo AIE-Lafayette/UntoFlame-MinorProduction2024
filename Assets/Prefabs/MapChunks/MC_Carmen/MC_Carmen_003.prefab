@@ -4942,6 +4942,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1956541852621290481}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ab3b941ad7627347b87a9ce8e6edff1, type: 2}
     - target: {fileID: 1591177047711668306, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -5170,6 +5174,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1956541852621290481}
     m_Modifications:
+    - target: {fileID: 132952613886166998, guid: 9e03e3536e2578e4d8226253f2865fbd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ccaa9cf4ad8d0045b10a34d60658888, type: 2}
     - target: {fileID: 870025040101448714, guid: 9e03e3536e2578e4d8226253f2865fbd, type: 3}
       propertyPath: m_Name
       value: LampIndustrial (1)
@@ -5289,6 +5297,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1956541852621290481}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ab3b941ad7627347b87a9ce8e6edff1, type: 2}
     - target: {fileID: 1591177047711668306, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -5332,6 +5344,10 @@ PrefabInstance:
     - target: {fileID: 1591177047711668306, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -84.193
+      objectReference: {fileID: 0}
+    - target: {fileID: 3685160281891056204, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6629796269130965816, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_Name
@@ -5622,6 +5638,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1956541852621290481}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ab3b941ad7627347b87a9ce8e6edff1, type: 2}
     - target: {fileID: 1591177047711668306, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -5665,6 +5685,10 @@ PrefabInstance:
     - target: {fileID: 1591177047711668306, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -79.709
+      objectReference: {fileID: 0}
+    - target: {fileID: 3685160281891056204, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6629796269130965816, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_Name
@@ -5806,6 +5830,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1956541852621290481}
     m_Modifications:
+    - target: {fileID: 895069486222015875, guid: 868424bd98baff94aa8a939a041c814e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab53b5f7c5f02104aa7ae6c2c5631248, type: 2}
     - target: {fileID: 1734440511598960839, guid: 868424bd98baff94aa8a939a041c814e, type: 3}
       propertyPath: m_Name
       value: SignStreetIndustrial
@@ -5863,6 +5891,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1956541852621290481}
     m_Modifications:
+    - target: {fileID: 132952613886166998, guid: 9e03e3536e2578e4d8226253f2865fbd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ccaa9cf4ad8d0045b10a34d60658888, type: 2}
     - target: {fileID: 870025040101448714, guid: 9e03e3536e2578e4d8226253f2865fbd, type: 3}
       propertyPath: m_Name
       value: LampIndustrial
@@ -5870,6 +5902,10 @@ PrefabInstance:
     - target: {fileID: 870025040101448714, guid: 9e03e3536e2578e4d8226253f2865fbd, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247454019832578039, guid: 9e03e3536e2578e4d8226253f2865fbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5521498754877329936, guid: 9e03e3536e2578e4d8226253f2865fbd, type: 3}
       propertyPath: m_RootOrder
@@ -6054,6 +6090,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1956541852621290481}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ab3b941ad7627347b87a9ce8e6edff1, type: 2}
     - target: {fileID: 1591177047711668306, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -6097,6 +6137,10 @@ PrefabInstance:
     - target: {fileID: 1591177047711668306, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -98.568
+      objectReference: {fileID: 0}
+    - target: {fileID: 3685160281891056204, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6629796269130965816, guid: db4b15ccbf24ae24c85c31d36a611130, type: 3}
       propertyPath: m_Name

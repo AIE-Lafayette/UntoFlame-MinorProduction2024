@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4840532980600300746
+--- !u!114 &-7321618366366980643
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,29 +20,32 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LampArtDeco_mat
-  m_Shader: {fileID: -6465566751694194690, guid: 6238fb9c5ebffc446ab5cddecba97fe5, type: 3}
-  m_ValidKeywords: []
+  m_Name: PIllarConcreteStatic_mat
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_ValidKeywords:
+  - _METALLICSPECGLOSSMAP
+  - _NORMALMAP
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: f457493605436c842bd64813da1fc2c8, type: 3}
+        m_Texture: {fileID: 2800000, guid: bdf528f2e7c5b97428248600be9b4c25, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Base_Texture:
-        m_Texture: {fileID: 2800000, guid: f457493605436c842bd64813da1fc2c8, type: 3}
+        m_Texture: {fileID: 2800000, guid: bdf528f2e7c5b97428248600be9b4c25, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 1ce37943e9292d74e87a26bd2857f1e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4c300df8e6f28eb46a5e3d180e8a4ae3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -58,27 +61,27 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: f73c38d57156ceb44a4b6d475fc4db2f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emmision_Texture:
-        m_Texture: {fileID: 2800000, guid: f73c38d57156ceb44a4b6d475fc4db2f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0269324ce5140954cafef013cd3b8695, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f457493605436c842bd64813da1fc2c8, type: 3}
+        m_Texture: {fileID: 2800000, guid: bdf528f2e7c5b97428248600be9b4c25, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetalicSmoothness:
-        m_Texture: {fileID: 2800000, guid: cbb570757cd51b841aa0bab53286f4a1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 91df20d25ea2a8c4e95901ad21c2333c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: cbb570757cd51b841aa0bab53286f4a1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 91df20d25ea2a8c4e95901ad21c2333c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_Texture:
-        m_Texture: {fileID: 2800000, guid: 1ce37943e9292d74e87a26bd2857f1e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4c300df8e6f28eb46a5e3d180e8a4ae3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -86,10 +89,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_47e3f63f06cb4429a0c13b4ef83d4a37_Texture_1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -121,9 +120,9 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Emmision_Texture_Amount: 1
+    - _Emmision_Texture_Amount: 0
     - _EnvironmentReflections: 1
-    - _Fresnel_Power: 1
+    - _Fresnel_Power: 3
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -134,7 +133,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 1
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -145,7 +144,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Base_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 5.145098, g: 3.8790271, b: 1.4007597, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fresnel_Color: {r: 0, g: 2.9803922, b: 2.0078433, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []

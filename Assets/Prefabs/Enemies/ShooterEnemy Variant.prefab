@@ -58,8 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa11c66167beef49ba56e39b9660bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knockbackForce: 0
-  _knockbackAngle: 0
+  _knockbackForce: 6
+  _knockbackAngle: 35
 --- !u!1 &8531283030728619231
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa11c66167beef49ba56e39b9660bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knockbackForce: 0
-  _knockbackAngle: 0
+  _knockbackForce: 6
+  _knockbackAngle: 35
 --- !u!1001 &852972520094441002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -284,6 +284,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5889555393299201531, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
+      propertyPath: _knockbackAngle
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889555393299201531, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
+      propertyPath: _knockbackForce
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7591957386569701105, guid: 9b7fed4318283984bb8dbf3bf899f712, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -320,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _range: 8
-  _fireRate: 0.8
+  _fireRate: 0.5
 --- !u!114 &3447526491475496625
 MonoBehaviour:
   m_ObjectHideFlags: 0

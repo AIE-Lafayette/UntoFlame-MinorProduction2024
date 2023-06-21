@@ -944,6 +944,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6134333401442708225, guid: f0e33f27a5c2877459473e2e8bbbe296, type: 3}
     - target: {fileID: 3999615012407113488, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
+      propertyPath: _knockbackTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999615012407113488, guid: 5ff93db75ef60e14589fe35b4b896995, type: 3}
       propertyPath: _invincibilityTime
       value: 5
       objectReference: {fileID: 0}
@@ -2588,12 +2592,12 @@ PrefabInstance:
       objectReference: {fileID: 5733306399834351853, guid: a9f89ec40550e6a4ebe1d8d82539031a, type: 3}
     - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: _chunkObjects.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: _chunkObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 6c81150b615a81745a468e48f0803be9, type: 2}
+      objectReference: {fileID: 11400000, guid: f38b72c59d949954691ff109e3368e53, type: 2}
     - target: {fileID: 8872748607480469955, guid: fb50869a85ef2de479456c7cc5cc5b2a, type: 3}
       propertyPath: _chunkObjects.Array.data[1]
       value: 

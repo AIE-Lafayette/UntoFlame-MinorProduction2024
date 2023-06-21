@@ -13,7 +13,7 @@ public class GroundColliderBehaviour : MonoBehaviour
     /// Determines what happens when the enters the ground collider
     /// </summary>
     /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         //If the player is on the ground...
         if (other.CompareTag("Ground"))
@@ -23,11 +23,11 @@ public class GroundColliderBehaviour : MonoBehaviour
             //...as well as set the player to have a doublejump  
             _moveBehaviour.HasDoubleJump = true;
         }
-        else if (!other.CompareTag("Ground"))
-        {
-            //...set "IsGrounded" to be false..
-            IsGrounded = false;
-        }
+        //else if (!other.CompareTag("Ground"))
+        //{
+        //    //...set "IsGrounded" to be false..
+        //    IsGrounded = false;
+        //}
     }
 
     /// <summary>

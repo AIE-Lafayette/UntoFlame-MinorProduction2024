@@ -3,7 +3,17 @@ guid: 04ca0c93b537f9b41a8bfc66cb701bd3
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EnemyEye_mat
+    second: {fileID: 2100000, guid: a5c089809ae40574c9f72ba89ccf8c07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Enemy_Ring_mat
+    second: {fileID: 2100000, guid: 1ef493a2759a50943b6fd1e0301baaf4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

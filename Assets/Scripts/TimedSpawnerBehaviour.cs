@@ -23,4 +23,13 @@ public class TimedSpawnerBehaviour : SpawnerBehaviour
             _currentTimeToSpawn = _timeToSpawn;
         }
     }
+
+    public override void SpawnItem()
+    {
+        int randomNumber = Random.Range(0, Items.Count);
+
+        Vector3 spawnPosition = new Vector3(Mathf.Floor(transform.position.x), transform.position.y, transform.position.z);
+
+        Instantiate(Items[randomNumber], spawnPosition, transform.rotation);
+    }
 }

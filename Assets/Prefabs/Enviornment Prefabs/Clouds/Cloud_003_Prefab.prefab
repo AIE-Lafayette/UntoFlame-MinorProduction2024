@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5405069566833673610}
   - component: {fileID: 930104534369849960}
   - component: {fileID: 930104534369849961}
-  - component: {fileID: 930104534369849962}
+  - component: {fileID: 8052029781439767040}
   m_Layer: 0
   m_Name: Cloud_003_Prefab
   m_TagString: Untagged
@@ -84,17 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &930104534369849962
-MeshCollider:
+--- !u!65 &8052029781439767040
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8337434935621353085}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.4923937, y: 0.0000023841858, z: 1.455574}
+  m_Center: {x: -0.27511588, y: -7.529119e-16, z: -0.32877585}
